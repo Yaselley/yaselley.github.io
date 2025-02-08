@@ -1,0 +1,142 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<!-- Publication Entries -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Papers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #333;
+    }
+    .paper {
+      margin-bottom: 30px;
+    }
+    .paper a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .paper a:hover {
+      text-decoration: underline;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+    .co-authors {
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <h1>Research Papers</h1> -->
+
+
+  <!-- Recent Papers First -->
+  <div>
+      <h2><span class="icon">📜</span><a href="https://arxiv.org/pdf/2502.03559" target="_blank">Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection</a></h2>
+      <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>, Youness Samih, Suraj Maharjan, Tim Polzehl, Sebastian Möller</p>
+      <p><strong>Publication date:</strong> 2025/2/8</p>
+      <p><strong>Conference:</strong> NAACL Findings 2025</p>
+      <p><strong>Description:</strong> This paper conducts a comprehensive layer-wise analysis of self-supervised learning (SSL) models for audio deepfake detection across diverse contexts, including multilingual datasets (English, Chinese, Spanish), partial, song, and scene-based deepfake scenarios. By systematically evaluating the contributions of different transformer layers, we uncover critical insights into model behavior and performance. Our findings reveal that lower layers consistently provide the most discriminative features, while higher layers capture less relevant information. Notably, all models achieve competitive equal error rate (EER) scores even when employing a reduced number of layers. This indicates that we can reduce computational costs and increase the inference speed of detecting deepfakes by utilizing only a few lower layers. This work enhances our understanding of SSL models in deepfake detection, offering valuable insights applicable across varied linguistic and contextual settings.</p>
+      <a href="https://arxiv.org/pdf/2502.03559" target="_blank">Read the paper</a>
+  </div>
+
+
+  <!-- Recent Papers First -->
+  <div class="paper">
+    <h2><span class="icon">📜</span><a href="https://arxiv.org/pdf/2502.00894" target="_blank">MorphBPE: A Morpho-Aware Tokenizer Bridging Linguistic Complexity for Efficient LLM Training Across Morphologies</a></h2>
+    <p><strong>Authors:</strong> Ehsaneddin Asgari, <strong>Yassine El Kheir</strong>
+, Mohammad Ali Sadraei Javaheri</p>
+    <p><strong>Publication Date:</strong> 2025/2/2</p>
+    <p><strong>Conference:</strong> Submitted to ACL 2025 <a href="https://arxiv.org/pdf/2502.00894" target="_blank">arXiv:2502.00894</a></p>
+    <p><strong>Description:</strong> We introduce MorphBPE, a morphology-aware extension of BPE that integrates linguistic structure into subword tokenization while preserving statistical efficiency, specifically for morphologically rich languages.</p>
+  </div>
+
+  <div class="paper">
+    <h2><span class="icon">🚀</span><a href="https://arxiv.org/pdf/2501.13944" target="_blank">Fanar: An Arabic-Centric Multimodal Generative AI Platform</a></h2>
+    <p><strong>Authors:</strong> Fanar Team, Ummar Abbas, Mohammad Shahmeer Ahmad, Firoj Alam, Enes Altinisik, Ehsannedin Asgari, Yazan Boshmaf, Sabri Boughorbel, Sanjay Chawla, Shammur Chowdhury, Fahim Dalvi, Kareem Darwish, Nadir Durrani, Mohamed Elfeky, Ahmed Elmagarmid, Mohamed Eltabakh, Masoomali Fatehkia, Anastasios Fragkopoulos, Maram Hasanain, Majd Hawasly, Mus' ab Husaini, Soon-Gyo Jung, Ji Kim Lucas, Walid Magdy, Safa Messaoud, Abubakr Mohamed, Tasnim Mohiuddin, Basel Mousi, Hamdy Mubarak, Ahmad Musleh, Zan Naeem, Mourad Ouzzani, Dorde Popovic, Amin Sadeghi, Husrev Taha Sencar, Mohammed Shinoy, Omar Sinan, Yifan Zhang, Ahmed Ali, <strong>Yassine El Kheir</strong>
+, Xiaosong Ma, Chaoyi Ruan</p>
+    <p><strong>Publication Date:</strong> 2025/1/18</p>
+    <p><strong>Report:</strong> arXiv preprint <a href="https://arxiv.org/pdf/2501.13944" target="_blank">arXiv:2501.13944</a></p>
+    <p><strong>Description:</strong> Fanar is a platform for Arabic-centric multimodal generative AI systems, supporting language, speech, and image generation tasks, with key components like Fanar Star and Fanar Prime, offering state-of-the-art Arabic language models and advanced capabilities like Islamic Retrieval Augmented Generation (RAG).</p>
+  </div>
+
+  <div class="paper">
+    <h2><span class="icon">🔤</span><a href="https://arxiv.org/pdf/2408.02430" target="_blank">Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic</a></h2>
+    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
+, Hamdy Mubarak, Ahmed Ali, Shammur Absar Chowdhury</p>
+    <p><strong>Publication Date:</strong> 2024/8/5</p>
+    <p><strong>Conference:</strong> ACL 2024</p>
+    <p><strong>Description:</strong> This paper presents a novel framework for dialectal sound and vowelization recovery in Arabic, addressing the challenge of recognizing borrowed and dialectal sounds in phonologically diverse languages, using limited data to improve performance.</p>
+  </div>
+
+    <!-- Larabench paper -->
+    <div>
+      <h2><span class="icon">🔤</span><a href="https://aclanthology.org/2024.eacl-long.30.pdf" target="_blank">Larabench: Benchmarking Arabic AI with Large Language Models</a></h2>
+      <p><strong>Authors:</strong> Ahmed Abdelali, Hamdy Mubarak, Shammur Chowdhury, Maram Hasanain, Basel Mousi, Sabri Boughorbel, Samir Abdaljalil, <strong>Yassine El Kheir</strong>, Daniel Izham, Fahim Dalvi, Majd Hawasly, Nizi Nazar, Youssef Elshahawy, Ahmed Ali, Nadir Durrani, Nataša Milić-Frayling, Firoj Alam</p>
+      <p><strong>Publication date:</strong> 2024/3</p>
+      <p><strong>Conference:</strong> Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)</p>
+      <p><strong>Pages:</strong> 487-520</p>
+      <a href="https://aclanthology.org/2024.eacl-long.30.pdf" target="_blank">Read the paper</a>
+  </div>
+
+
+  <div class="paper">
+    <h2><span class="icon">🗣️</span><a href="https://arxiv.org/pdf/2310.13974" target="_blank">Automatic Pronunciation Assessment - A Review</a></h2>
+    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
+, Ahmed Ali, Shammur Absar Chowdhury</p>
+    <p><strong>Publication Date:</strong> 2023/10/21</p>
+    <p><strong>Conference:</strong> Findings of EMNLP 23</p>
+    <p><strong>Description:</strong> A comprehensive review of recent advancements in automatic pronunciation assessment for both phonemic and prosodic aspects, discussing methods, challenges, and resources, with directions for future research.</p>
+  </div>
+
+  <div class="paper">
+    <h2><span class="icon">📚</span><a href="https://arxiv.org/pdf/2309.07719" target="_blank">L1-aware Multilingual Mispronunciation Detection Framework</a></h2>
+    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
+, Shammur Absar Chowdhury, Ahmed Ali</p>
+    <p><strong>Publication Date:</strong> 2023/9/14</p>
+    <p><strong>Conference:</strong> IEEE ICASSP 2024</p>
+    <p><strong>Description:</strong> This paper introduces the L1-MultiMDD framework, incorporating L1-aware speech representation to detect mispronunciations across multiple languages, improving multilingual MDD by integrating an L1-L2 embedding and multi-task learning.</p>
+  </div>
+
+  <div class="paper">
+    <h2><span class="icon">🎤</span><a href="https://arxiv.org/pdf/2306.01845" target="_blank">Multi-View Multi-Task Representation Learning for Mispronunciation Detection</a></h2>
+    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
+, Shammur Absar Chowdhury, Ahmed Ali</p>
+    <p><strong>Publication Date:</strong> 2023/6/2</p>
+    <p><strong>Conference:</strong> Speech and Language Technology in Education Workshop (SLaTE 2023)</p>
+    <p><strong>Description:</strong> This paper proposes a novel architecture for mispronunciation detection that uses multiple views of the input data assisted by auxiliary tasks to learn more distinctive phonetic representations in low-resource settings, outperforming the state-of-the-art models.</p>
+  </div>
+
+    <!-- QVoice paper -->
+    <div>
+      <h2><span class="icon">🎤</span><a href="https://arxiv.org/pdf/2305.07445" target="_blank">QVoice: Arabic Speech Pronunciation Learning Application</a></h2>
+      <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>, Fouad Khnaisser, Shammur Absar Chowdhury, Hamdy Mubarak, Shazia Afzal, Ahmed Ali</p>
+      <p><strong>Publication date:</strong> 2023/5/9</p>
+      <p><strong>Conference:</strong> INTERSPEECH 2023</p>
+  </div>
+
+
+</body>
+</html>
