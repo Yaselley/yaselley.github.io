@@ -15,7 +15,7 @@ name                     : &name "Yassine El Kheir"
 description              : &description "PhD Student - Research on Machine learning for Speech Processing"
 url                      : https://yaselley.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "Yaselley/yaselley"
+repository               : "https://yaselley.github.io/"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -351,3 +351,6 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+navigation: 
+  main: main
