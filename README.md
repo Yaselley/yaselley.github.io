@@ -1,89 +1,50 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+## Hi 👋, I'm Yassine El Kheir
+I'm a PhD student at the **German Research Center for Artificial Intelligence (DFKI)** in Berlin, working on **robust speech representations in self-supervised learning (SSL) models** for **audio deepfake detection** under the supervision of **[Prof. Sebastian Möller](https://scholar.google.de/citations?user=BC_qcg0AAAAJ&hl=en)** and  **[Dr. Tim Polzehl](https://scholar.google.de/citations?user=tImnUh0AAAAJ&hl=en)**.
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+### Research Interests 👀
+- 🔍 **Self-Supervised Learning (SSL) for Speech**
+- 🎭 **Audio Deepfake Detection, Anti-Spoofing**
+- 🌍 **Multilingual and Non-Native Speech Processing/Recognition**
+- 🗣 **Automatic Speech Recognition (ASR) and NLP**
 
-# Getting Started
+### News ✨
+- **2025-02-05**: 🎉 Excited to announce **[MorphBPE](https://arxiv.org/pdf/2502.00894)** Tokenizer used in **[Fanar Qatar LLM](https://arxiv.org/pdf/2501.13944)** is published!
+- **2025-01-25**: 🎉 Excited to announce a new paper on Layer-wise Analysis of SSL Models for Audio Deepfake Detection model interpretability accepted to Findings of NAACL 2025!
+- **2024-12-12**: Invited as a researcher for a two-week project at the SDAIA Winter School, organized by **[SDAIA](https://sdaia-event.webflow.io/)**. 
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
-See more info at https://academicpages.github.io/
+### Education 🎓
+- 📍 **PhD in Computer Science** (2024 - Exp. 2027) - DFKI, Berlin, Germany
+- 📍 **MSc in Machine Learning** (2021 - 2022) - KTH Royal Institute of Technology, Sweden
+- 📍 **Master in Data Science** (2020 - 2021) - EURECOM & Télécom Paris, France
+- 📍 **Master in Digital Engineering** (2019 - 2022) - Télécom Paris, France
+- 📍 **Preparatory Classes (CPGE)** (2017 - 2019) - Lycée Mohammed VI, Morocco
 
-## Running locally
+### Jobs 🧑‍💻
+- **2024.07 - ongoing**: PhD Student - Researcher @ DFKI, Berlin, Germany
+- **2022.07 - 2024.07**: Research Associate @ Qatar Computing Research Institute (QCRI), Qatar
+- **2022.02 - 2022.07**: Machine Learning Intern @ Snappet, Netherlands
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+### Selected Publications 📜
+1. **Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection** - NAACL Findings 2025
+2. **Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic** - ACL 2024
+3. **Speech Representation Analysis Based on Inter- and Intra-Model Similarities** - IEEE WICASSP 2024
+4. **L1-aware Multilingual Mispronunciation Detection Framework** - IEEE ICASSP 2024
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
+For a full list of my publications, visit my **[Google Scholar](https://scholar.google.com/)**.
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+### Projects 🚀
+- **News-Polygraph**: 🤖 News-polygraph is a collaborative research project working on a comprehensive, multimodal technology platform for analyzing and detecting disinformation (speech part -- deepfake detection).
+- **Fanar LLM**: 🤖 An Arabic-centric large language model supporting multiple dialects.
+- **QVoice**: 🗣️ The first Arabic speech mispronunciation detection system.
+- **AraVoiceL2 Dataset**: 🎤 A dataset of non-native Arabic speech for phoneme-level mispronunciation detection.
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and open `.gitignore` then add `vendor` inside it.
+### Awards & Scholarships 🏅
+- 🏆 **Telecom Paris Scholarship (2022-2023)**
+- 🏆 **Excellence Scholarship FIRSI (2019-2022)**
+- 🏆 **Prepa FIRSI Scholarship (2018-2019)**
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
-
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+### Contact 📬
+- 📧 **Email**: elkheiryassine0@gmail.com
+- 🌐 **Website**: [yassine.el_kheir.github.io](https://yassine.el_kheir.github.io)
+- 🔗 **LinkedIn**: [yassine-elkheir](https://www.linkedin.com/in/yassine-elkheir-169b97191/)
