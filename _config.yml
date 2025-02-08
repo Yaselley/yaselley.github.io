@@ -13,7 +13,7 @@ title                    : "Yassine El Kheir"
 title_separator          : "-"
 name                     : &name "Yassine El Kheir"
 description              : &description "PhD Student - Research on Machine learning for Speech Processing"
-url                      : https://yaselley.github.io/yaselley # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://yaselley.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Yaselley/yaselley"
 
