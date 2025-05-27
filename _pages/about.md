@@ -17,6 +17,8 @@ I'm a PhD student at the **German Research Center for Artificial Intelligence (D
 - 🗣 **Automatic Speech Recognition (ASR) and NLP**
 
 ### News ✨
+- **2025-05-27**: 🎉 Excited to announce **[BiCrossMamba-ST](https://arxiv.org/pdf/2505.13930)** a novel architecture using Mamba architecture for robust deepfake detection.
+- **2025-05-27**: 🎉 Served as Speech ML Mentor at **[HackAI](https://hackai.ma).
 - **2025-02-05**: 🎉 Excited to announce **[MorphBPE](https://arxiv.org/pdf/2502.00894)** Tokenizer used in **[Fanar Qatar LLM](https://arxiv.org/pdf/2501.13944)** is published!
 - **2025-01-25**: 🎉 Excited to announce a new paper on Layer-wise Analysis of SSL Models for Audio Deepfake Detection model interpretability accepted to Findings of NAACL 2025!
 - **2024-12-12**: Invited as a researcher for a two-week project at the SDAIA Winter School, organized by **[SDAIA](https://sdaia-event.webflow.io/)**. 
@@ -35,10 +37,11 @@ I'm a PhD student at the **German Research Center for Artificial Intelligence (D
 - **2022.02 - 2022.07**: Machine Learning Intern @ Snappet, Netherlands
 
 ### Selected Publications 📜
-1. **Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection** - NAACL Findings 2025
-2. **Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic** - ACL 2024
-3. **Speech Representation Analysis Based on Inter- and Intra-Model Similarities** - IEEE WICASSP 2024
-4. **L1-aware Multilingual Mispronunciation Detection Framework** - IEEE ICASSP 2024
+1. **BiCrossMamba-ST: Speech Deepfake Detection with Bidirectional Mamba Spectro-Temporal Cross-Attention** - InterSpeech 2025
+2. **Generalizable Audio Spoofing Detection using Non-Semantic Representations** - InterSpeech 2025
+3. **Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection** - NAACL Findings 2025
+4. **Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic** - ACL 2024
+5. **L1-aware Multilingual Mispronunciation Detection Framework** - IEEE ICASSP 2024
 
 For a full list of my publications, visit my **[Google Scholar](https://scholar.google.com/)**.
 
@@ -55,5 +58,5 @@ For a full list of my publications, visit my **[Google Scholar](https://scholar.
 
 ### Contact 📬
 - 📧 **Email**: elkheiryassine0@gmail.com
-- 🌐 **Website**: [yassine.el_kheir.github.io](https://yassine.el_kheir.github.io)
+- 🌐 **Website**: [yassine.el_kheir.github.io](https://yaselley.github.io)
 - 🔗 **LinkedIn**: [yassine-elkheir](https://www.linkedin.com/in/yassine-elkheir-169b97191/)
