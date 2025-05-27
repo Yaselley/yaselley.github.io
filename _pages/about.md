@@ -7,6 +7,7 @@ redirect_from:
   - /about.html
 ---
 
+
 ## Hi 👋, I'm Yassine El Kheir
 I'm a PhD student at the **German Research Center for Artificial Intelligence (DFKI)** in Berlin, working on **robust speech representations in self-supervised learning (SSL) models** for **audio deepfake detection** under the supervision of **[Prof. Sebastian Möller](https://scholar.google.de/citations?user=BC_qcg0AAAAJ&hl=en)** and  **[Dr. Tim Polzehl](https://scholar.google.de/citations?user=tImnUh0AAAAJ&hl=en)**.
 
@@ -18,7 +19,7 @@ I'm a PhD student at the **German Research Center for Artificial Intelligence (D
 
 ### News ✨
 - **2025-05-27**: 🎉 Excited to announce **[BiCrossMamba-ST](https://arxiv.org/pdf/2505.13930)** a novel architecture using Mamba architecture for robust deepfake detection.
-- **2025-05-27**: 🎉 Served as Speech ML Mentor at **[HackAI](https://hackai.ma).
+- **2025-05-27**: 🎉 Served as Speech ML Mentor at **[HackAI](https://hackai.ma)**.
 - **2025-02-05**: 🎉 Excited to announce **[MorphBPE](https://arxiv.org/pdf/2502.00894)** Tokenizer used in **[Fanar Qatar LLM](https://arxiv.org/pdf/2501.13944)** is published!
 - **2025-01-25**: 🎉 Excited to announce a new paper on Layer-wise Analysis of SSL Models for Audio Deepfake Detection model interpretability accepted to Findings of NAACL 2025!
 - **2024-12-12**: Invited as a researcher for a two-week project at the SDAIA Winter School, organized by **[SDAIA](https://sdaia-event.webflow.io/)**. 
