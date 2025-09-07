@@ -20,6 +20,7 @@ I'm a 2nd year PhD student at the **German Research Center for Artificial Intell
 ### News ✨
 - **2025-08-25**: 🎉 Organized **[ArabicSpeech](https://www.linkedin.com/feed/update/urn:li:activity:7364633218228142083/)** Meetup at Interspeech'25.
 - **2025-07-15**: 🎉 Excited to announce **[Two Views, One Truth](https://arxiv.org/pdf/2507.20417)** a hybrid fusion framework that integrate self-supervised learning (SSL)-based representations with handcrafted spectral descriptors (e.g., MFCC, LFCC, CQCC) for robust speech deepfake detection.
+- **2025-06-15**: 🎉 Organized Iqra'Eval Shared Task @ **[ArabicNLP'25](https://huggingface.co/IqraEval)**
 - **2025-05-27**: 🎉 Excited to announce **[BiCrossMamba-ST](https://arxiv.org/pdf/2505.13930)** a novel architecture using Mamba architecture for robust deepfake detection.
 - **2025-05-27**: 🎉 Served as Speech ML Mentor at **[HackAI](https://hackai.ma)**.
 - **2025-02-05**: 🎉 Excited to announce **[MorphBPE](https://arxiv.org/pdf/2502.00894)** Tokenizer used in **[Fanar Qatar LLM](https://arxiv.org/pdf/2501.13944)** is published!
