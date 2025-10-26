@@ -18,6 +18,10 @@ I'm a 2nd year PhD student at the **German Research Center for Artificial Intell
 - 🗣 **Automatic Speech Recognition (ASR) and NLP**
 
 ### News ✨
+- **2025-10-25**: 🎉 Code made public **[Two Views, One Truth Code](https://github.com/Yaselley/TwoViews_OneTruth)**.
+- **2025-10-22**: 🎉 Talk to **[RealityDefender](https://www.realitydefender.com/)** on **[Generalizable Audio Deepfake detection](https://docs.google.com/presentation/d/1jH2z-_WUoXEDicsIszbYa81h1nIOMqZwfndiom6lnOo/edit?slide=id.p#slide=id.p)**.
+- **2025-10-15**: 🎉 Presented **[Two Views, One Truth](https://arxiv.org/pdf/2507.20417)** at WASPAA'25 in Tahoe City, California, USA.
+- **2025-09-15**: 🎉 Received a Travel Grant from WASPAA'25: **1,000$**.
 - **2025-08-25**: 🎉 Organized **[ArabicSpeech](https://www.linkedin.com/feed/update/urn:li:activity:7364633218228142083/)** Meetup at Interspeech'25.
 - **2025-07-15**: 🎉 Excited to announce **[Two Views, One Truth](https://arxiv.org/pdf/2507.20417)** a hybrid fusion framework that integrate self-supervised learning (SSL)-based representations with handcrafted spectral descriptors (e.g., MFCC, LFCC, CQCC) for robust speech deepfake detection.
 - **2025-06-15**: 🎉 Organized Iqra'Eval Shared Task @ **[ArabicNLP'25](https://huggingface.co/IqraEval)**
