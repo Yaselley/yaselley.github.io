@@ -1,0 +1,230 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+<style>
+.proj-page { font-size: 0.96em; }
+.proj-page h2 {
+  margin-top: 1.8em; font-size: 1.05em; color: #0f172a;
+  border-bottom: 1px solid #e2e8f0; padding-bottom: 0.3em;
+}
+.proj-page .intro { color: #475569; font-size: 0.95em; line-height: 1.6; }
+.detail-card {
+  display: flex; gap: 18px;
+  border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 18px; margin: 14px 0;
+  background: #ffffff;
+}
+.detail-card .logo {
+  flex: 0 0 84px; width: 84px; height: 84px;
+  border-radius: 12px; overflow: hidden; background: #ffffff;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid #f1f5f9;
+}
+.detail-card .logo img { max-width: 88%; max-height: 88%; object-fit: contain; }
+.detail-card .body { flex: 1; }
+.detail-card h3 {
+  margin: 0 0 4px 0; font-size: 1.08em; color: #0f172a;
+}
+.detail-card .meta {
+  font-size: 0.8em; color: #64748b; margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.detail-card p { margin: 0 0 8px 0; font-size: 0.93em; line-height: 1.55; color: #334155; }
+.detail-card ul { margin: 6px 0 8px 1.2em; font-size: 0.91em; line-height: 1.55; color: #334155; }
+.detail-card .links a {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-right: 6px;
+  font-size: 0.83em;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid #dbeafe;
+}
+.detail-card .links a:hover { background: #dbeafe; }
+.theme-tag {
+  display: inline-block;
+  font-size: 0.72em; font-weight: 700;
+  padding: 1px 8px; border-radius: 4px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.theme-foundation { background: #ede9fe; color: #5b21b6; }
+.theme-deepfake   { background: #dbeafe; color: #1e3a8a; }
+.theme-multilingual { background: #fee2e2; color: #991b1b; }
+.theme-low-resource { background: #dcfce7; color: #166534; }
+.theme-industry { background: #fef3c7; color: #92400e; }
+</style>
+
+<div class="proj-page">
+
+<p class="intro">
+A selection of research and engineering projects I've contributed to or led, spanning <b>speech foundation models</b>, <b>audio language models</b>, <b>multilingual speech</b>, and <b>robust, trustworthy audio AI</b>. Within each theme, projects are listed roughly newest-first.
+</p>
+
+<h2>🛡️ Robust &amp; Trustworthy Speech AI</h2>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/deepfense.png' | relative_url }}" alt="DeepFense"></div>
+  <div class="body">
+    <span class="theme-tag theme-deepfake">open-source</span>
+    <h3>DeepFense, Modular Deepfake Audio Detection Framework</h3>
+    <div class="meta">DFKI &middot; Apache-2.0 &middot; 2025 to present</div>
+    <p>An open-source, configuration-driven framework I co-built for deepfake audio detection research. Mix and match SSL frontends, classifier backends, losses, and augmentations entirely via YAML, without touching code.</p>
+    <ul>
+      <li>Plug-and-play registry: Wav2Vec&nbsp;2.0, WavLM, HuBERT, MERT, EAT frontends and AASIST, ECAPA-TDNN, Nes2Net, RawNet2 backends.</li>
+      <li><b>455+ pretrained models</b> and <b>12 benchmark datasets</b> (ASVSpoof19, CompSpoof, DECRO, SONICS) on HuggingFace.</li>
+      <li>Built-in augmentations (RawBoost, RIR, codec, noise) and standardized metrics (EER, minDCF, actDCF, F1).</li>
+    </ul>
+    <div class="links">
+      <a href="https://deepfense.github.io/">website</a>
+      <a href="https://huggingface.co/DeepFense">🤗 HuggingFace</a>
+      <a href="https://github.com/Yaselley/deepfense-framework">GitHub</a>
+      <a href="https://arxiv.org/abs/2604.08450">paper</a>
+    </div>
+  </div>
+</div>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/newspolygraph.png' | relative_url }}" alt="News-Polygraph"></div>
+  <div class="body">
+    <span class="theme-tag theme-deepfake">disinformation</span>
+    <h3>News-Polygraph</h3>
+    <div class="meta">DFKI &middot; BMBF-funded research project &middot; 2024 to present</div>
+    <p>A collaborative German research initiative building a multimodal platform for detecting and analyzing disinformation across speech, image, and text. My contribution is on the speech and audio side: robust generalizable deepfake detection, anti-spoofing, and interpretability, feeding into the DeepFense framework above.</p>
+    <div class="links">
+      <a href="https://news-polygraph.com/">project website</a>
+    </div>
+  </div>
+</div>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/dfki.png' | relative_url }}" alt="DFKI"></div>
+  <div class="body">
+    <span class="theme-tag theme-deepfake">research line</span>
+    <h3>Mamba, SSL Interpretability, and Spectral Fusion</h3>
+    <div class="meta">DFKI &middot; ICASSP 2026 &middot; Interspeech 2025 &middot; WASPAA 2025 &middot; NAACL Findings 2025</div>
+    <p>A connected research line on making speech anti-spoofing systems both stronger and more efficient:</p>
+    <ul>
+      <li><b>Parameter-Efficient Multi-Scale Adapter</b> (ICASSP 2026): adapter-style fine-tuning of SSL backbones for synthetic-speech detection, with sharp efficiency gains.</li>
+      <li><b>BiCrossMamba-ST</b> (Interspeech 2025): among the first successful applications of Mamba state-space models to speech anti-spoofing. SOTA on ASVSpoof LA21 and DF21 with 28% fewer parameters than Transformer baselines.</li>
+      <li><b>Two Views, One Truth</b> (WASPAA 2025): hybrid fusion of SSL embeddings with handcrafted spectral descriptors (MFCC, LFCC, CQCC) for cross-domain robustness.</li>
+      <li><b>Layer-wise SSL analysis</b> (NAACL Findings 2025): first large-scale study showing that lower layers of speech SSL models are sufficient for artifact detection, enabling ~3x faster inference.</li>
+    </ul>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2510.24852">Multi-Scale Adapter</a>
+      <a href="https://arxiv.org/pdf/2505.13930">BiCrossMamba-ST</a>
+      <a href="https://arxiv.org/pdf/2507.20417">Two Views</a>
+      <a href="https://arxiv.org/pdf/2502.03559">Layer-wise</a>
+      <a href="https://github.com/Yaselley/TwoViews_OneTruth">code</a>
+    </div>
+  </div>
+</div>
+
+<h2>🌍 Multilingual &amp; Low-Resource Speech</h2>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/atlasia.png' | relative_url }}" alt="AtlasIA"></div>
+  <div class="body">
+    <span class="theme-tag theme-low-resource">TTS &middot; ASR &middot; community</span>
+    <h3>AtlasIA, Open-Source AI for Morocco</h3>
+    <div class="meta">Speech Team Lead &middot; 2025 to present</div>
+    <p>Leading the Speech Team in an open-source community building AI grounded in Moroccan linguistic identity:</p>
+    <ul>
+      <li><b><a href="https://huggingface.co/blog/abdeljalilELmajjodi/moulsot">MoulSot (2026)</a></b>: curated <b>80 hours</b> of high-quality Moroccan Darija speech distilled from <b>1,500 hours</b> of YouTube content through a 9-stage pipeline (Silero VAD, SQUIM, Audiobox Aesthetics, DNS64 denoising, pyannote diarization, Argilla human-in-the-loop, Gemini 2.5 Pro transcription), then fine-tuned <b>Qwen3-ASR-1.7B</b> on top. Released as <code>atlasia/MoulSot-Full</code> and <code>atlasia/moulsot.v0.3</code>.</li>
+      <li>Building the first natural <b>Text-to-Speech</b> system and tokenizer for Moroccan Darija.</li>
+      <li>Mentoring HackAI Morocco teams on forced alignment and low-resource ASR.</li>
+    </ul>
+    <div class="links">
+      <a href="https://atlasia.ma/">website</a>
+      <a href="https://huggingface.co/atlasia">🤗 HuggingFace</a>
+      <a href="https://huggingface.co/blog/abdeljalilELmajjodi/moulsot">MoulSot blog</a>
+      <a href="https://huggingface.co/atlasia/moulsot.v0.3">model</a>
+      <a href="https://huggingface.co/datasets/atlasia/MoulSot-Full">dataset</a>
+    </div>
+  </div>
+</div>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/iqraeval.png' | relative_url }}" alt="Iqra'Eval"></div>
+  <div class="body">
+    <span class="theme-tag theme-multilingual">benchmark &middot; community</span>
+    <h3>Iqra'Eval, Quranic Pronunciation Assessment</h3>
+    <div class="meta">Founder &amp; Lead Organizer &middot; 2024 to present</div>
+    <p>A multi-institutional initiative to benchmark Arabic pronunciation assessment, using Quranic recitation as the case study:</p>
+    <ul>
+      <li>Founded and ran the <b>Iqra'Eval Shared Task at ArabicNLP 2025</b>, establishing the first standard benchmark for Quranic recitation analysis.</li>
+      <li>Co-built <b>QuranMB</b>, the first expert-annotated dataset for Quranic mispronunciation (~2 h), with baselines, originally as lead of a 15-researcher team at the SDAIA Winter School.</li>
+      <li>Next iteration accepted as an <b>Interspeech 2026 Challenge (IQRA 2026)</b>.</li>
+    </ul>
+    <div class="links">
+      <a href="https://huggingface.co/IqraEval">🤗 HuggingFace</a>
+      <a href="https://arxiv.org/abs/2506.07757">Benchmark paper</a>
+      <a href="https://arxiv.org/abs/2603.29087">IQRA 2026</a>
+    </div>
+  </div>
+</div>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/qvoice.png' | relative_url }}" alt="QVoice"></div>
+  <div class="body">
+    <span class="theme-tag theme-multilingual">pronunciation &middot; ASR</span>
+    <h3>QVoice and the Arabic Speech Stack</h3>
+    <div class="meta">QCRI &middot; Interspeech 2023 &middot; 6+ follow-on papers</div>
+    <p>Led <b>QVoice</b>, the first end-to-end mispronunciation detection system for Modern Standard Arabic, and contributed a series of SOTA results on L2 speech assessment and multilingual ASR:</p>
+    <ul>
+      <li><b>SpeechBlender</b> (SLaTE 2023), fine-grained augmentation for mispronunciation data scarcity.</li>
+      <li><b>L1-aware Multilingual MDD</b> (ICASSP 2024), incorporating native-language priors into multilingual mispronunciation detection.</li>
+      <li><b>Beyond Orthography</b> (ACL 2024), recovering short vowels and dialectal sounds in Arabic with limited data.</li>
+      <li><b>AraVoiceL2</b>, non-native Arabic speech dataset for phoneme-level evaluation.</li>
+    </ul>
+    <div class="links">
+      <a href="https://arxiv.org/pdf/2305.07445">QVoice paper</a>
+      <a href="https://arxiv.org/pdf/2310.13974">Review</a>
+    </div>
+  </div>
+</div>
+
+<h2>🧠 Speech &amp; Audio Foundation Models</h2>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/fanar.svg' | relative_url }}" alt="Fanar"></div>
+  <div class="body">
+    <span class="theme-tag theme-foundation">LLM &middot; tokenization</span>
+    <h3>Fanar &amp; MorphBPE</h3>
+    <div class="meta">QCRI &middot; 2022 to 2024 &middot; arXiv 2025</div>
+    <p>Contributed to <b>Fanar</b>, Qatar's Arabic-centric multimodal LLM, and designed <b>MorphBPE</b>, a morphology-aware tokenizer that integrates linguistic structure into subword segmentation. The work shows how foundation-model design choices can be tuned to morphologically rich languages without sacrificing efficiency.</p>
+    <ul>
+      <li><b>MorphBPE</b> improves fertility rates and downstream generation quality for morphologically rich languages, with negligible overhead vs. plain BPE.</li>
+      <li>Helped run large-scale data filtering and training pipelines (300M to 3B parameters) with MosaicML's LLM-Foundry.</li>
+    </ul>
+    <div class="links">
+      <a href="https://arxiv.org/pdf/2501.13944">Fanar paper</a>
+      <a href="https://arxiv.org/pdf/2502.00894">MorphBPE</a>
+    </div>
+  </div>
+</div>
+
+<h2>💼 Industry</h2>
+
+<div class="detail-card">
+  <div class="logo"><img src="{{ '/images/projects/gretchen.svg' | relative_url }}" alt="Gretchen AI"></div>
+  <div class="body">
+    <span class="theme-tag theme-industry">startup &middot; part-time</span>
+    <h3>Gretchen AI, Research &amp; Engineering Lead</h3>
+    <div class="meta">Berlin &middot; Mar 2025 to present &middot; part-time</div>
+    <p>Co-leading R&amp;D for generative-media detection at a Berlin-based AI startup. Built a proprietary image deepfake detector that ranked <b>#1 on the Deepfake-Eval 2024 benchmark</b> (~83% accuracy), and designed the scalable inference pipeline used in production.</p>
+    <div class="links">
+      <a href="https://gretchen-ai.com/">website</a>
+    </div>
+  </div>
+</div>
+
+</div>

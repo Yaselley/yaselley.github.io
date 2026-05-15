@@ -5,160 +5,332 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- Publication Entries -->
+<style>
+.pub-page { font-size: 0.95em; }
+.pub-page .scholar-note {
+  font-size: 0.9em; color: #475569; margin-bottom: 1.5em;
+  padding: 8px 12px; background: #f1f5f9; border-radius: 6px;
+  border-left: 3px solid #2563eb;
+}
+.pub-year {
+  font-size: 1.15em; font-weight: 700; color: #0f172a;
+  margin: 1.6em 0 0.6em 0;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #e2e8f0;
+}
+.pub-entry {
+  display: flex; gap: 14px;
+  padding: 0.8em 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+.pub-entry:last-child { border-bottom: none; }
+.pub-venue-col {
+  flex: 0 0 110px;
+  font-size: 0.78em; font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-top: 4px;
+}
+.pub-venue-col .v {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #e0f2fe; color: #075985;
+}
+.pub-venue-col .v.top { background: #ddd6fe; color: #5b21b6; }
+.pub-venue-col .v.arxiv { background: #fef3c7; color: #92400e; }
+.pub-venue-col .v.journal { background: #dcfce7; color: #166534; }
+.pub-content { flex: 1; min-width: 0; }
+.pub-content .title {
+  font-weight: 600; color: #0f172a; font-size: 0.98em;
+  line-height: 1.4; display: block;
+}
+.pub-content .title a { color: #0f172a; text-decoration: none; }
+.pub-content .title a:hover { color: #2563eb; }
+.pub-content .authors {
+  font-size: 0.88em; color: #475569; margin-top: 3px;
+}
+.pub-content .authors .me { font-weight: 700; color: #0f172a; }
+.pub-content .desc {
+  font-size: 0.86em; color: #64748b; margin-top: 4px; line-height: 1.5;
+}
+.pub-content .links {
+  margin-top: 4px;
+}
+.pub-content .links a {
+  font-size: 0.78em;
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 7px;
+  background: #f1f5f9;
+  color: #1e40af;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+}
+.pub-content .links a:hover { background: #e0e7ff; }
+@media (max-width: 600px) {
+  .pub-entry { flex-direction: column; gap: 4px; }
+  .pub-venue-col { flex: none; }
+}
+</style>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Papers</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-    h2 {
-      color: #333;
-    }
-    .paper {
-      margin-bottom: 30px;
-    }
-    .paper a {
-      text-decoration: none;
-      color: #0077cc;
-    }
-    .paper a:hover {
-      text-decoration: underline;
-    }
-    .icon {
-      margin-right: 10px;
-    }
-    .co-authors {
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
+<div class="pub-page">
 
-  <!-- <h1>Research Papers</h1> -->
-
-
-  <!-- Recent Papers First -->
-  <!-- Recent Papers First -->
-
-  <div class="paper">
-    <h2><span class="icon">📜</span><a href="https://arxiv.org/pdf/2505.13930" target="_blank">BiCrossMamba-ST: Speech Deepfake Detection with Bidirectional Mamba Spectro-Temporal Cross-Attention</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>, Tim Polzehl, Sebastian Möller</p>
-    <p><strong>Publication Date:</strong> 2025/5/21</p>
-    <p><strong>Conference:</strong> Accepted to Interspeech 2025 <a href="https://arxiv.org/pdf/2505.13930" target="_blank">arXiv:2502.00894</a></p>
-    <p><strong>Description:</strong> We propose BiCrossMamba-ST, a robust framework for
-      speech deepfake detection that leverages a dual-branch spectrotemporal architecture powered by bidirectional Mamba blocks
-      and mutual cross-attention. By processing spectral sub-bands
-      and temporal intervals separately and then integrating their
-      representations, BiCrossMamba-ST effectively captures the subtle
-      cues of synthetic speech. In addition, our proposed framework
-      leverages a convolution-based 2D attention map to focus on specific
-      spectro-temporal regions, enabling robust deepfake detection.
-      Operating directly on raw features, BiCrossMamba-ST achieves
-      significant performance improvements, a 67.74% and 26.3%
-      relative gain over state-of-the-art AASIST on ASVSpoof LA21
-      and ASVSpoof DF21 benchmarks, respectively, and a 6.80%
-      improvement over RawBMamba on ASVSpoof DF21. Code and
-      models will be made publicly available.</p>
-  </div>
-
-  <div>
-    <h2><span class="icon">📜</span><a href="https://arxiv.org/pdf/2502.03559" target="_blank">Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>, Youness Samih, Suraj Maharjan, Tim Polzehl, Sebastian Möller</p>
-    <p><strong>Publication date:</strong> 2025/2/8</p>
-    <p><strong>Conference:</strong> NAACL Findings 2025</p>
-    <p><strong>Description:</strong> This paper conducts a comprehensive layer-wise analysis of self-supervised learning (SSL) models for audio deepfake detection across diverse contexts, including multilingual datasets (English, Chinese, Spanish), partial, song, and scene-based deepfake scenarios. By systematically evaluating the contributions of different transformer layers, we uncover critical insights into model behavior and performance. Our findings reveal that lower layers consistently provide the most discriminative features, while higher layers capture less relevant information. Notably, all models achieve competitive equal error rate (EER) scores even when employing a reduced number of layers. This indicates that we can reduce computational costs and increase the inference speed of detecting deepfakes by utilizing only a few lower layers. This work enhances our understanding of SSL models in deepfake detection, offering valuable insights applicable across varied linguistic and contextual settings.</p>
-    <a href="https://arxiv.org/pdf/2502.03559" target="_blank">Read the paper</a>
+<div class="scholar-note">
+For the most up-to-date list, see my <a href="https://scholar.google.com/citations?user=KATQHwgAAAAJ">Google Scholar profile</a>. <b>Bold</b> indicates I'm a first or co-first author.
 </div>
 
-  <div class="paper">
-    <h2><span class="icon">📜</span><a href="https://arxiv.org/pdf/2502.00894" target="_blank">MorphBPE: A Morpho-Aware Tokenizer Bridging Linguistic Complexity for Efficient LLM Training Across Morphologies</a></h2>
-      Spectro-Temporal Cross-Attention</a></h2>
-    <p><strong>Authors:</strong> Ehsaneddin Asgari, <strong>Yassine El Kheir</strong>
-        , Mohammad Ali Sadraei Javaheri</p>
-        <p><strong>Publication Date:</strong> 2025/2/2</p>
-                <p><strong>Conference:</strong> Submitted to ACL 2025 <a href="https://arxiv.org/pdf/2502.00894" target="_blank">arXiv:2502.00894</a></p>
-    <p><strong>Description:</strong> We introduce MorphBPE, a morphology-aware extension of BPE that integrates linguistic structure into subword tokenization while preserving statistical efficiency, specifically for morphologically rich languages.</p>
+<!-- ============= 2026 ============= -->
+<div class="pub-year">2026</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2026</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2604.08450">DeepFense: A Unified, Modular, and Extensible Framework for Robust Deepfake Audio Detection</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Das, Y. Xiao, X. Wang, F. Kallel, E. E. Erdogan, N. T. Vu, T. Polzehl, S. Möller</div>
+    <div class="desc">A unified, configuration-driven open-source framework for deepfake audio detection research: 455+ pretrained models, 12 benchmark datasets, plug-and-play SSL frontends, classifier backends, losses, and augmentations, all via YAML.</div>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2604.08450">arXiv</a>
+      <a href="https://deepfense.github.io/">website</a>
+      <a href="https://github.com/Yaselley/deepfense-framework">code</a>
+      <a href="https://huggingface.co/DeepFense">🤗 models</a>
+    </div>
   </div>
+</div>
 
-  <div class="paper">
-    <h2><span class="icon">🚀</span><a href="https://arxiv.org/pdf/2501.13944" target="_blank">Fanar: An Arabic-Centric Multimodal Generative AI Platform</a></h2>
-    <p><strong>Authors:</strong> Fanar Team, Ummar Abbas, Mohammad Shahmeer Ahmad, Firoj Alam, Enes Altinisik, Ehsannedin Asgari, Yazan Boshmaf, Sabri Boughorbel, Sanjay Chawla, Shammur Chowdhury, Fahim Dalvi, Kareem Darwish, Nadir Durrani, Mohamed Elfeky, Ahmed Elmagarmid, Mohamed Eltabakh, Masoomali Fatehkia, Anastasios Fragkopoulos, Maram Hasanain, Majd Hawasly, Mus' ab Husaini, Soon-Gyo Jung, Ji Kim Lucas, Walid Magdy, Safa Messaoud, Abubakr Mohamed, Tasnim Mohiuddin, Basel Mousi, Hamdy Mubarak, Ahmad Musleh, Zan Naeem, Mourad Ouzzani, Dorde Popovic, Amin Sadeghi, Husrev Taha Sencar, Mohammed Shinoy, Omar Sinan, Yifan Zhang, Ahmed Ali, <strong>Yassine El Kheir</strong>
-, Xiaosong Ma, Chaoyi Ruan</p>
-    <p><strong>Publication Date:</strong> 2025/1/18</p>
-    <p><strong>Report:</strong> arXiv preprint <a href="https://arxiv.org/pdf/2501.13944" target="_blank">arXiv:2501.13944</a></p>
-    <p><strong>Description:</strong> Fanar is a platform for Arabic-centric multimodal generative AI systems, supporting language, speech, and image generation tasks, with key components like Fanar Star and Fanar Prime, offering state-of-the-art Arabic language models and advanced capabilities like Islamic Retrieval Augmented Generation (RAG).</p>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2026</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2603.29087">IQRA 2026: Interspeech Challenge on Automatic Pronunciation Assessment for Modern Standard Arabic (MSA)</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Meghanani, M. Shahin, O. Ibrahim, S. A. Chowdhury, et al.</div>
+    <div class="desc">The second iteration of the Iqra'Eval shared task, accepted as an Interspeech 2026 Challenge, expanding scope to general MSA pronunciation assessment beyond Quranic recitation.</div>
+    <div class="links"><a href="https://arxiv.org/abs/2603.29087">arXiv</a></div>
   </div>
+</div>
 
-  <div class="paper">
-    <h2><span class="icon">🔤</span><a href="https://arxiv.org/pdf/2408.02430" target="_blank">Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
-, Hamdy Mubarak, Ahmed Ali, Shammur Absar Chowdhury</p>
-    <p><strong>Publication Date:</strong> 2024/8/5</p>
-    <p><strong>Conference:</strong> ACL 2024</p>
-    <p><strong>Description:</strong> This paper presents a novel framework for dialectal sound and vowelization recovery in Arabic, addressing the challenge of recognizing borrowed and dialectal sounds in phonologically diverse languages, using limited data to improve performance.</p>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">ICASSP 2026</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2510.24852">A Parameter-Efficient Multi-Scale Convolutional Adapter for Synthetic Speech Detection</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, F. Ritter-Gutiérrez, A. Das, T. Polzehl, S. Möller</div>
+    <div class="desc">A lightweight multi-scale convolutional adapter that adapts large SSL backbones to synthetic-speech detection with a tiny parameter footprint, while keeping cross-domain robustness.</div>
+    <div class="links"><a href="https://arxiv.org/abs/2510.24852">arXiv</a></div>
   </div>
+</div>
 
-    <!-- Larabench paper -->
-    <div>
-      <h2><span class="icon">🔤</span><a href="https://aclanthology.org/2024.eacl-long.30.pdf" target="_blank">Larabench: Benchmarking Arabic AI with Large Language Models</a></h2>
-      <p><strong>Authors:</strong> Ahmed Abdelali, Hamdy Mubarak, Shammur Chowdhury, Maram Hasanain, Basel Mousi, Sabri Boughorbel, Samir Abdaljalil, <strong>Yassine El Kheir</strong>, Daniel Izham, Fahim Dalvi, Majd Hawasly, Nizi Nazar, Youssef Elshahawy, Ahmed Ali, Nadir Durrani, Nataša Milić-Frayling, Firoj Alam</p>
-      <p><strong>Publication date:</strong> 2024/3</p>
-      <p><strong>Conference:</strong> Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)</p>
-      <p><strong>Pages:</strong> 487-520</p>
-      <a href="https://aclanthology.org/2024.eacl-long.30.pdf" target="_blank">Read the paper</a>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">ICASSP 2026</span></div>
+  <div class="pub-content">
+    <span class="title">The DFKI-SLT System for ESDD 2026: BiCrossMamba-ST with Attentive SSL Fusion</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Das, E. E. Erdogan, F. Kallel, T. Polzehl, S. Möller</div>
+    <div class="desc">Our DFKI-SLT submission to the ESDD 2026 Challenge: BiCrossMamba-ST combined with an attentive SSL fusion module for end-to-end speech deepfake detection.</div>
   </div>
+</div>
 
-
-  <div class="paper">
-    <h2><span class="icon">🗣️</span><a href="https://arxiv.org/pdf/2310.13974" target="_blank">Automatic Pronunciation Assessment - A Review</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
-, Ahmed Ali, Shammur Absar Chowdhury</p>
-    <p><strong>Publication Date:</strong> 2023/10/21</p>
-    <p><strong>Conference:</strong> Findings of EMNLP 23</p>
-    <p><strong>Description:</strong> A comprehensive review of recent advancements in automatic pronunciation assessment for both phonemic and prosodic aspects, discussing methods, challenges, and resources, with directions for future research.</p>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2026</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2602.02286">DFKI-Speech System for WildSpoof Challenge: A Robust Framework for SASV In-the-Wild</a></span>
+    <div class="authors">A. Das, <span class="me">Y. El Kheir</span>, E. E. Erdogan, F. Kallel, T. Polzehl, S. Möller</div>
+    <div class="desc">Our DFKI-Speech entry to the WildSpoof Challenge: a robust framework for spoofing-aware automatic speaker verification (SASV) in unconstrained real-world conditions.</div>
+    <div class="links"><a href="https://arxiv.org/abs/2602.02286">arXiv</a></div>
   </div>
+</div>
 
-  <div class="paper">
-    <h2><span class="icon">📚</span><a href="https://arxiv.org/pdf/2309.07719" target="_blank">L1-aware Multilingual Mispronunciation Detection Framework</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
-, Shammur Absar Chowdhury, Ahmed Ali</p>
-    <p><strong>Publication Date:</strong> 2023/9/14</p>
-    <p><strong>Conference:</strong> IEEE ICASSP 2024</p>
-    <p><strong>Description:</strong> This paper introduces the L1-MultiMDD framework, incorporating L1-aware speech representation to detect mispronunciations across multiple languages, improving multilingual MDD by integrating an L1-L2 embedding and multi-task learning.</p>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v">IWSDS 2026</span></div>
+  <div class="pub-content">
+    <span class="title">The Complementary Role of Para-linguistic Cues for Robust Pronunciation Assessment</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, S. A. Chowdhury, A. Ali</div>
+    <div class="desc">Shows that integrating para-linguistic cues (prosody, voice quality) alongside phonetic content improves robustness of pronunciation assessment systems in noisy / mismatched conditions.</div>
   </div>
+</div>
 
-  <div class="paper">
-    <h2><span class="icon">🎤</span><a href="https://arxiv.org/pdf/2306.01845" target="_blank">Multi-View Multi-Task Representation Learning for Mispronunciation Detection</a></h2>
-    <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>
-, Shammur Absar Chowdhury, Ahmed Ali</p>
-    <p><strong>Publication Date:</strong> 2023/6/2</p>
-    <p><strong>Conference:</strong> Speech and Language Technology in Education Workshop (SLaTE 2023)</p>
-    <p><strong>Description:</strong> This paper proposes a novel architecture for mispronunciation detection that uses multiple views of the input data assisted by auxiliary tasks to learn more distinctive phonetic representations in low-resource settings, outperforming the state-of-the-art models.</p>
+<!-- ============= 2025 ============= -->
+<div class="pub-year">2025</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">WASPAA 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2507.20417">Two Views, One Truth: Spectral and Self-Supervised Features Fusion for Robust Speech Deepfake Detection</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Das, E. E. Erdogan, F. Ritter-Gutiérrez, T. Polzehl, S. Möller</div>
+    <div class="desc">A hybrid fusion framework integrating SSL-based representations with handcrafted spectral descriptors (MFCC, LFCC, CQCC) for robust speech deepfake detection across unseen domains.</div>
+    <div class="links">
+      <a href="https://arxiv.org/pdf/2507.20417">arXiv</a>
+      <a href="https://github.com/Yaselley/TwoViews_OneTruth">code</a>
+    </div>
   </div>
+</div>
 
-    <!-- QVoice paper -->
-    <div>
-      <h2><span class="icon">🎤</span><a href="https://arxiv.org/pdf/2305.07445" target="_blank">QVoice: Arabic Speech Pronunciation Learning Application</a></h2>
-      <p><strong>Authors:</strong> <strong>Yassine El Kheir</strong>, Fouad Khnaisser, Shammur Absar Chowdhury, Hamdy Mubarak, Shazia Afzal, Ahmed Ali</p>
-      <p><strong>Publication date:</strong> 2023/5/9</p>
-      <p><strong>Conference:</strong> INTERSPEECH 2023</p>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">Interspeech 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2505.13930">BiCrossMamba-ST: Speech Deepfake Detection with Bidirectional Mamba Spectro-Temporal Cross-Attention</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, T. Polzehl, S. Möller</div>
+    <div class="desc">A dual-branch spectro-temporal architecture with bidirectional Mamba blocks and mutual cross-attention. +67.74% / +26.3% relative gain over AASIST on ASVSpoof LA21 / DF21 with 28% fewer parameters.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2505.13930">arXiv</a></div>
   </div>
+</div>
 
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">Interspeech 2025</span></div>
+  <div class="pub-content">
+    <span class="title">Towards a Unified Benchmark for Arabic Pronunciation Assessment: Quranic Recitation as Case Study</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, O. Ibrahim, A. Meghanani, N. Almarwani, H. O. Toyin, S. Alharbi, et al.</div>
+    <div class="desc">First unified benchmark for Arabic pronunciation assessment using Quranic recitation.</div>
+  </div>
+</div>
 
-</body>
-</html>
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">NAACL Findings 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2502.03559">Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, Y. Samih, S. Maharjan, T. Polzehl, S. Möller</div>
+    <div class="desc">First large-scale layer-wise study of Wav2Vec 2.0, HuBERT, WavLM for deepfake detection across multilingual and partial / song / scene-based scenarios. Lower layers consistently provide the most discriminative features → ~3× faster inference at comparable EER.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2502.03559">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v">ArabicNLP 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2506.07757">Iqra'Eval: A Shared Task on Qur'anic Pronunciation Assessment</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Meghanani, H. O. Toyin, N. Almarwani, O. Ibrahim, et al.</div>
+    <div class="desc">The first shared task benchmarking Qur'anic pronunciation assessment, with task design, baselines, and lessons learned.</div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2501.13944">Fanar: An Arabic-Centric Multimodal Generative AI Platform</a></span>
+    <div class="authors">Fanar Team (incl. <span class="me">Y. El Kheir</span>)</div>
+    <div class="desc">Arabic-centric multimodal generative AI platform supporting language, speech, and image generation with Islamic RAG.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2501.13944">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2502.00894">MorphBPE: A Morpho-Aware Tokenizer Bridging Linguistic Complexity for Efficient LLM Training Across Morphologies</a></span>
+    <div class="authors">E. Asgari, <span class="me">Y. El Kheir</span>, M. A. S. Javaheri</div>
+    <div class="desc">A morphology-aware extension of BPE that integrates linguistic structure into subword tokenization while preserving statistical efficiency.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2502.00894">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v arxiv">arXiv 2025</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/abs/2509.00186">Generalizable Audio Spoofing Detection using Non-Semantic Representations</a></span>
+    <div class="authors">A. Das, <span class="me">Y. El Kheir</span>, C. Franzreb, T. Herzig, T. Polzehl, S. Möller</div>
+    <div class="links"><a href="https://arxiv.org/abs/2509.00186">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v journal">Data in Brief 2025</span></div>
+  <div class="pub-content">
+    <span class="title">CAFE: Spontaneous code-switching speech dataset in Algerian dialect, French and English</span>
+    <div class="authors">H. E. O. Lachemat, A. Akli, N. Oukas, <span class="me">Y. El Kheir</span>, S. Haboussi, S. A. Chowdhury</div>
+  </div>
+</div>
+
+<!-- ============= 2024 ============= -->
+<div class="pub-year">2024</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">ACL 2024</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2408.02430">Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, H. Mubarak, A. Ali, S. A. Chowdhury</div>
+    <div class="desc">A framework for dialectal sound and vowelization recovery in Arabic, tackling borrowed and dialectal sounds in phonologically diverse languages with limited data.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2408.02430">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">ICASSP 2024</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2309.07719">L1-aware Multilingual Mispronunciation Detection Framework</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, S. A. Chowdhury, A. Ali</div>
+    <div class="desc">L1-MultiMDD: incorporates L1-aware speech representation via an L1-L2 embedding and multi-task learning to improve multilingual MDD.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2309.07719">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">ICASSP 2024</span></div>
+  <div class="pub-content">
+    <span class="title">Speech Representation Analysis Based on Inter- and Intra-Model Similarities</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Ali, S. A. Chowdhury</div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">EACL 2024</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://aclanthology.org/2024.eacl-long.30.pdf">LAraBench: Benchmarking Arabic AI with Large Language Models</a></span>
+    <div class="authors">A. Abdelali, H. Mubarak, S. Chowdhury, M. Hasanain, B. Mousi, S. Boughorbel, S. Abdaljalil, <span class="me">Y. El Kheir</span>, et al.</div>
+    <div class="links"><a href="https://aclanthology.org/2024.eacl-long.30.pdf">PDF</a></div>
+  </div>
+</div>
+
+<!-- ============= 2023 ============= -->
+<div class="pub-year">2023</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">EMNLP Findings 2023</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2310.13974">Automatic Pronunciation Assessment — A Review</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, A. Ali, S. A. Chowdhury</div>
+    <div class="desc">A comprehensive review of recent advances in automatic pronunciation assessment for both phonemic and prosodic aspects, covering methods, challenges, resources, and future directions.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2310.13974">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v top">Interspeech 2023</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2305.07445">QVoice: Arabic Speech Pronunciation Learning Application</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, F. Khnaisser, S. A. Chowdhury, H. Mubarak, S. Afzal, A. Ali</div>
+    <div class="desc">First end-to-end mispronunciation detection system for Modern Standard Arabic.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2305.07445">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v">SLaTE 2023</span></div>
+  <div class="pub-content">
+    <span class="title"><a href="https://arxiv.org/pdf/2306.01845">Multi-View Multi-Task Representation Learning for Mispronunciation Detection</a></span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, S. A. Chowdhury, A. Ali</div>
+    <div class="desc">Multiple input views with auxiliary tasks yield more distinctive phonetic representations in low-resource MDD settings.</div>
+    <div class="links"><a href="https://arxiv.org/pdf/2306.01845">arXiv</a></div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v">SLaTE 2023</span></div>
+  <div class="pub-content">
+    <span class="title">SpeechBlender: Speech Augmentation Framework for Mispronunciation Data Generation</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, S. A. Chowdhury, A. Ali, H. Mubarak, S. Afzal</div>
+    <div class="desc">Fine-grained data augmentation pipeline that generates mispronunciation errors via masked, mix-factor blending of phonetic units. SOTA on Speechocean762 (+2.0 PCC) and +4.6 F1 on AraVoiceL2.</div>
+  </div>
+</div>
+
+<!-- ============= MSc Thesis ============= -->
+<div class="pub-year">Thesis</div>
+
+<div class="pub-entry">
+  <div class="pub-venue-col"><span class="v">MSc Thesis</span></div>
+  <div class="pub-content">
+    <span class="title">Mispronunciation Detection with SpeechBlender Data Augmentation Pipeline</span>
+    <div class="authors"><span class="me">Y. El Kheir</span>, KTH Royal Institute of Technology (2023)</div>
+    <div class="desc">Supervisors: Dr. Ahmed Ali and Dr. Shammur Chowdhury.</div>
+  </div>
+</div>
+
+</div>
