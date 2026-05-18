@@ -259,6 +259,8 @@ My work spans <b>speech and audio foundation models</b>, <b>audio language model
 
 <div class="section-title">🔬 Research Interests</div>
 
+Interested in the science of robust speech intelligence, how foundation models represent, reason about, and are fooled by audio, and how to make them work across the world's linguistic diversity
+
 - **Speech and audio foundation models**: SSL representations, audio LLMs, interpretability, efficient architectures
 - **Multilingual and low-resource speech**: ASR, TTS, pronunciation assessment, dialectal modeling
 - **Robust and trustworthy audio AI**: deepfake detection, anti-spoofing, generalization across unseen domains
