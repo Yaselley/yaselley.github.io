@@ -215,16 +215,46 @@ redirect_from:
 </style>
 
 <p class="intro-lead">
+  I'm a PhD researcher at the 
+  <a href="https://www.dfki.de/en/web">German Research Center for AI (DFKI)</a> 
+  and <a href="https://www.tu.berlin/en/">TU Berlin</a>, advised by 
+  <a href="https://scholar.google.de/citations?user=BC_qcg0AAAAJ">Prof. Sebastian Möller</a> 
+  and <a href="https://scholar.google.de/citations?user=tImnUh0AAAAJ">Dr. Tim Polzehl</a>. 
+  I also lead R&amp;D (part-time) at 
+  <a href="https://gretchen-ai.com/">Gretchen AI</a> in Berlin.
+  <br><br>
+  My research sits at the intersection of 
+  <b>speech foundation models</b>, <b>trustworthy audio AI</b>, and 
+  <b>linguistic inclusivity</b>. I build and study systems that detect AI-generated 
+  speech, interpret self-supervised representations, and extend the reach of 
+  modern speech AI to languages and dialects that mainstream models leave behind — 
+  with a focus on Arabic and its rich dialectal diversity.
+  <br><br>
+  Before Berlin, I spent two years at the 
+  <a href="https://www.hbku.edu.qa/en/qcri">Qatar Computing Research Institute</a>, 
+  contributing to <a href="https://arxiv.org/pdf/2501.13944">Fanar</a> 
+  (Qatar's Arabic-centric LLM) and leading 
+  <a href="https://arxiv.org/pdf/2305.07445">QVoice</a>, 
+  the first end-to-end Arabic mispronunciation detection system.
+  <br><br>
+  <span class="thread">
+    The question driving my work: <i>how do we make speech AI that is 
+    <b>robust</b> enough to trust, <b>efficient</b> enough to deploy, 
+    and <b>inclusive</b> enough to serve everyone?</i>
+  </span>
+</p>
+
+<!-- <p class="intro-lead">
 I'm a PhD researcher in <b>machine learning for speech and audio</b> at the <a href="https://www.dfki.de/en/web">German Research Center for AI (DFKI)</a> and <a href="https://www.tu.berlin/en/">TU Berlin</a>, advised by <a href="https://scholar.google.de/citations?user=BC_qcg0AAAAJ">Prof. Sebastian Möller</a> and <a href="https://scholar.google.de/citations?user=tImnUh0AAAAJ">Dr. Tim Polzehl</a>. I'm also Research &amp; Engineering Lead (part-time) at <a href="https://gretchen-ai.com/">Gretchen AI</a> in Berlin.
 <br><br>
 My work spans <b>speech and audio foundation models</b>, <b>audio language models</b>, <b>multilingual speech</b> (ASR, TTS, pronunciation, dialects), and <b>robust, trustworthy speech AI</b>, including deepfake detection and anti-spoofing. Before Berlin I spent two years as a Research Associate at <a href="https://www.hbku.edu.qa/en/qcri">Qatar Computing Research Institute</a>, where I contributed to <a href="https://arxiv.org/pdf/2501.13944">Fanar</a> (Arabic-centric LLM) and led <a href="https://arxiv.org/pdf/2305.07445">QVoice</a>, the first end-to-end Arabic mispronunciation detection system.
 <br>
 <span class="thread">The thread across my work: speech AI that is <b>robust</b> in adversarial settings, <b>efficient</b> enough to deploy, and <b>inclusive</b> of languages and dialects that mainstream foundation models leave behind.</span>
-</p>
+</p> -->
 
 <div class="hiring-banner">
 <span class="pill">OPEN</span>
-<b>Looking for a research position starting January 2026.</b> Speech / audio ML, foundation models, audio LLMs, multilingual speech, or trust &amp; safety in audio. Industry or academia, Europe / Middle East / remote. <a href="mailto:yassine.el_kheir@dfki.de">Get in touch.</a>
+<b>Looking for a research position starting January 2027.</b> Speech / audio ML, foundation models, audio LLMs, multilingual speech, or trust &amp; safety in audio. Industry or academia, Europe / Middle East / remote. <a href="mailto:yassine.el_kheir@dfki.de">Get in touch.</a>
 </div>
 
 <div class="section-title">🔬 Research Interests</div>
