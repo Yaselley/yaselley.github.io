@@ -237,10 +237,15 @@ redirect_from:
   <a href="https://arxiv.org/pdf/2305.07445">QVoice</a>, 
   the first end-to-end Arabic mispronunciation detection system.
   <br><br>
-  <span class="thread">
+  <!-- <span class="thread">
     The question driving my work: <i>how do we make speech AI that is 
     <b>robust</b> enough to trust, <b>efficient</b> enough to deploy, 
     and <b>inclusive</b> enough to serve everyone?</i>
+  </span> -->
+  <span class="thread">
+    I study the science of <b>robust speech intelligence</b> — how foundation 
+    models represent, reason about, and are <b>fooled</b> by audio — and how 
+    to make them work across the <b>world's linguistic diversity</b>.
   </span>
 </p>
 
@@ -259,7 +264,7 @@ My work spans <b>speech and audio foundation models</b>, <b>audio language model
 
 <div class="section-title">🔬 Research Interests</div>
 
-Interested in the science of robust speech intelligence, how foundation models represent, reason about, and are fooled by audio, and how to make them work across the world's linguistic diversity
+<!-- Interested in the science of robust speech intelligence, how foundation models represent, reason about, and are fooled by audio, and how to make them work across the world's linguistic diversity -->
 
 - **Speech and audio foundation models**: SSL representations, audio LLMs, interpretability, efficient architectures
 - **Multilingual and low-resource speech**: ASR, TTS, pronunciation assessment, dialectal modeling
