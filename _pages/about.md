@@ -21,7 +21,9 @@ The next step is a model that can explain the decision. From December 2025 to Ap
 
 The version other people can run is [DeepFense](https://deepfense.github.io/): an open, YAML-driven detection framework with 455+ pretrained models, which I presented at Interspeech 2026. The same line ships at [Gretchen AI](https://gretchen-ai.com/), whose detector ranked first on Deepfake-Eval 2024, and in production speech systems at [CAMB.AI](https://www.camb.ai/) across 150+ languages.
 
-I lead two projects on top of that research. **VERIDIC**, and a [Software Campus](https://www.softwarecampus.de/) project with Holtzbrinck and Springer Nature: €115k in federal funding, from July 2026, on multimodal deepfake detection and fact-checking. I run the team of students and research assistants.
+I lead [Fake-O-Meter](https://fake-o-meter.github.io/) and coordinate it day to day. DFKI runs the consortium. The partners are TU Berlin, Otto von Guericke University Magdeburg, Ernst-Abbe-Hochschule Jena, Deutsche Welle, and dpa. The project builds a multimodal assistant for image, audio, and video deepfakes: detection, explanations grounded in professional fact-checks, a dialogue assistant, and prebunking around elections. Fact-checkers stay in the loop. It is funded by the German Federal Ministry of Research, Technology and Space, from May 2026 to February 2029. [Project site](https://fake-o-meter.github.io/). [DFKI page](https://www.dfki.de/web/forschung/projekte-publikationen/projekt/fake-o-meter).
+
+I also lead **VERIDIC**, and a [Software Campus](https://www.softwarecampus.de/) project with Holtzbrinck and Springer Nature: €115k in federal funding, from July 2026, on multimodal deepfake detection and fact-checking, with a team of students and research assistants.
 
 ## Recent
 
@@ -29,6 +31,7 @@ I lead two projects on top of that research. **VERIDIC**, and a [Software Campus
 - **September 2026.** [Interspeech 2026](https://www.isca-archive.org/interspeech_2026), Sydney. I presented [DeepFense](https://arxiv.org/abs/2604.08450) and the [IQRA 2026](https://arxiv.org/abs/2603.29087) challenge, and co-authored [Evidence Subspace Projection](https://arxiv.org/abs/2607.11538) with the University of Stuttgart.
 - **July 2026.** Co-organized [ArA-DF 2026](https://huggingface.co/spaces/ArabicSpeech/ara-df-2026), the Arabic speech deepfake detection shared task at ArabicNLP, co-located with EMNLP 2026. Sixteen teams, two tracks.
 - **July 2026.** I lead a [Software Campus](https://www.softwarecampus.de/) project with Holtzbrinck and Springer Nature (€115k, federal funding) on multimodal deepfake detection and fact-checking, and I lead **VERIDIC**.
+- **May 2026.** [Fake-O-Meter](https://fake-o-meter.github.io/) starts. I lead the project and coordinate the partners day to day. [DFKI page](https://www.dfki.de/web/forschung/projekte-publikationen/projekt/fake-o-meter).
 - **May 2026.** Speech ML mentor and PhD panelist at [HackAI Morocco](https://hackai.ma).
 - **April 2026.** Finished the visiting stay at NII Tokyo. [Paper](https://arxiv.org/abs/2608.30622).
 
@@ -48,7 +51,7 @@ GrokBot and Interspeech 2026 are in the list above. Slides, video, and the earli
 - **Speech LLMs.** [Textual Acoustic Grounding](https://arxiv.org/abs/2608.30622), with Xin Wang and Junichi Yamagishi at NII. [Models](https://huggingface.co/01Yassine/AudioLLM-Deepfake-Detection).
 - **Production.** [Gretchen AI](https://gretchen-ai.com/) (first on Deepfake-Eval 2024) and [CAMB.AI](https://www.camb.ai/) (ASR, TTS, and dubbing in 150+ languages).
 - **Language.** [MoulSot](https://huggingface.co/blog/abdeljalilELmajjodi/moulsot) with [AtlasIA](https://atlasia.ma/), the [Iqra'Eval](https://huggingface.co/IqraEval) / [IQRA 2026](https://arxiv.org/abs/2603.29087) pronunciation challenge, and [Fanar](https://arxiv.org/abs/2501.13944) / [MorphBPE](https://arxiv.org/abs/2502.00894).
-- **Leading.** [Software Campus](https://www.softwarecampus.de/) with Holtzbrinck and Springer Nature, and VERIDIC.
+- **Leading.** [Fake-O-Meter](https://fake-o-meter.github.io/) (project lead and day-to-day coordination, May 2026 to February 2029), [Software Campus](https://www.softwarecampus.de/) with Holtzbrinck and Springer Nature, and VERIDIC.
 
 The [projects page]({{ '/projects/' | relative_url }}) has the longer notes.
 
@@ -67,7 +70,8 @@ Full list on the [publications page]({{ '/publications/' | relative_url }}) and 
 
 ## Positions
 
-- **PhD researcher**, DFKI and TU Berlin, 2024 to present. I lead [Fake-O-Meter](https://fake-o-meter.github.io/), the DFKI-coordinated BMBF project on public deepfake-detection tools.
+- **PhD researcher**, DFKI and TU Berlin, 2024 to present. Advisors: Sebastian Möller and Tim Polzehl.
+- **Project lead, [Fake-O-Meter](https://fake-o-meter.github.io/)**, May 2026 to February 2029. I lead the project and coordinate the consortium day to day: TU Berlin, OVGU Magdeburg, Ernst-Abbe-Hochschule Jena, Deutsche Welle, and dpa. DFKI is the coordinator. Funded by the BMFTR. [Project site](https://fake-o-meter.github.io/). [DFKI record](https://www.dfki.de/web/forschung/projekte-publikationen/projekt/fake-o-meter).
 - **Project lead, Software Campus**, July 2026 to present. I lead a €115k federally funded project with [Holtzbrinck and Springer Nature](https://www.softwarecampus.de/) on multimodal deepfake detection and fact-checking, with a team of students and research assistants.
 - **Project lead, VERIDIC.**
 - **Visiting researcher**, NII, Tokyo, December 2025 to April 2026. Xin Wang and Junichi Yamagishi.

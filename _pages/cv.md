@@ -19,7 +19,8 @@ The <a href="{{ '/' | relative_url }}">homepage</a> is the narrative version of 
 
 <h2>Now</h2>
 <ul>
-  <li>PhD researcher, DFKI and TU Berlin, 2024 to present. Advisors: Sebastian Möller and Tim Polzehl. Thesis: robust audio deepfake detection, from SSL models to audio LLMs. Project lead of Fake-O-Meter.</li>
+  <li>PhD researcher, DFKI and TU Berlin, 2024 to present. Advisors: Sebastian Möller and Tim Polzehl. Thesis: robust audio deepfake detection, from SSL models to audio LLMs.</li>
+  <li>Project lead and day-to-day coordinator, Fake-O-Meter, May 2026 to February 2029. DFKI coordinates the consortium (TU Berlin, OVGU Magdeburg, EAH Jena, Deutsche Welle, dpa). Funded by the BMFTR. <a href="https://fake-o-meter.github.io/">Project site</a>, <a href="https://www.dfki.de/web/forschung/projekte-publikationen/projekt/fake-o-meter">DFKI page</a>.</li>
   <li>Project lead, Software Campus, July 2026 to present. Federally funded project (€115k) with Holtzbrinck and Springer Nature on multimodal deepfake detection and fact-checking.</li>
   <li>Project lead, VERIDIC.</li>
   <li>Visiting researcher, NII Tokyo, December 2025 to April 2026, with Xin Wang and Junichi Yamagishi.</li>
