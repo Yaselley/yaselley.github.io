@@ -7,620 +7,82 @@ redirect_from:
   - /about.html
 ---
 
-<style>
-/* ---- Homepage styling ---- */
-.intro-lead { font-size: 1.02em; line-height: 1.65; margin-bottom: 1.4em; }
-.intro-lead .thread {
-  display: inline-block;
-  border-left: 3px solid #2563eb;
-  background: #f1f5f9;
-  padding: 0.55em 0.9em;
-  margin-top: 0.6em;
-  border-radius: 0 6px 6px 0;
-  font-style: italic;
-}
+I am a PhD researcher at the [German Research Center for AI (DFKI)](https://www.dfki.de/en/web) and [TU Berlin](https://www.tu.berlin/en/), advised by [Sebastian Möller](https://scholar.google.de/citations?user=BC_qcg0AAAAJ) and [Tim Polzehl](https://scholar.google.de/citations?user=tImnUh0AAAAJ). I build speech and audio systems that have to hold up outside a single benchmark: self-supervised representations, small detectors, and speech LLMs that can say why a voice is synthetic. I expect to defend in **April 2027**.
 
-.hiring-banner {
-  background: linear-gradient(90deg, #ecfdf5 0%, #f0fdf4 100%);
-  border: 1px solid #bbf7d0;
-  border-left: 4px solid #059669;
-  padding: 0.7em 1em;
-  border-radius: 6px;
-  margin: 0.8em 0 1.4em 0;
-  font-size: 0.95em;
-}
-.hiring-banner .pill {
-  display: inline-block;
-  background: #059669; color: white;
-  padding: 1px 9px; border-radius: 999px;
-  font-size: 0.75em; font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-right: 8px;
-  vertical-align: 1px;
-}
+I am looking for research and applied scientist roles from **November 2026**. Write to [elkheiryassine0@gmail.com](mailto:elkheiryassine0@gmail.com). A two-page CV is [here]({{ '/files/Yassine_ElKheir_CV.pdf' | relative_url }}).
 
-.section-title {
-  font-size: 1.18em;
-  font-weight: 700;
-  margin: 2.0em 0 0.8em 0;
-  padding-bottom: 0.35em;
-  border-bottom: 1px solid #e2e8f0;
-  letter-spacing: 0.01em;
-}
+## How the work connects
 
-/* News */
-.news-list { list-style: none; padding-left: 0; margin: 0; }
-.news-list li {
-  display: flex; gap: 0.9em;
-  padding: 0.45em 0;
-  border-bottom: 1px dashed #e5e7eb;
-  font-size: 0.95em; line-height: 1.5;
-}
-.news-list li:last-child { border-bottom: none; }
-.news-date {
-  flex: 0 0 95px;
-  font-variant-numeric: tabular-nums;
-  color: #64748b;
-  font-size: 0.88em;
-  font-weight: 600;
-  padding-top: 2px;
-}
-.news-body { flex: 1; }
-.news-tag {
-  display: inline-block;
-  font-size: 0.72em;
-  font-weight: 700;
-  padding: 1px 7px;
-  border-radius: 4px;
-  margin-right: 6px;
-  letter-spacing: 0.04em;
-  vertical-align: 1px;
-}
-.tag-paper { background: #dbeafe; color: #1e3a8a; }
-.tag-talk  { background: #fef3c7; color: #92400e; }
-.tag-grant { background: #dcfce7; color: #166534; }
-.tag-org   { background: #fce7f3; color: #9d174d; }
-.tag-code  { background: #e0e7ff; color: #3730a3; }
-.tag-visit { background: #f1f5f9; color: #334155; }
+Arabic speech came first. At [QCRI](https://www.hbku.edu.qa/en/qcri) I built pronunciation and recognition systems, including [QVoice](https://arxiv.org/abs/2305.07445), and contributed to [Fanar](https://arxiv.org/abs/2501.13944), Qatar's Arabic-centric multimodal model, including the [MorphBPE](https://arxiv.org/abs/2502.00894) tokenizer.
 
-/* Project cards */
-.proj-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 14px;
-  margin: 0.6em 0 0.4em 0;
-}
-.proj-card {
-  display: flex;
-  gap: 14px;
-  padding: 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  background: #ffffff;
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
-}
-.proj-card:hover {
-  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
-  transform: translateY(-1px);
-}
-.proj-logo {
-  flex: 0 0 64px;
-  width: 64px; height: 64px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #f1f5f9;
-  display: flex; align-items: center; justify-content: center;
-}
-.proj-logo img { max-width: 86%; max-height: 86%; object-fit: contain; display: block; }
-.proj-body { flex: 1; min-width: 0; }
-.proj-title {
-  font-weight: 700;
-  font-size: 1.0em;
-  margin: 0 0 2px 0;
-  color: #0f172a;
-}
-.proj-meta {
-  font-size: 0.78em;
-  color: #64748b;
-  margin-bottom: 6px;
-  letter-spacing: 0.02em;
-}
-.proj-desc { font-size: 0.88em; line-height: 1.45; color: #334155; margin: 0 0 6px 0; }
-.proj-links { font-size: 0.82em; }
-.proj-links a {
-  display: inline-block;
-  margin-right: 8px;
-  color: #2563eb;
-  text-decoration: none;
-}
-.proj-links a:hover { text-decoration: underline; }
+That turned into a question about representations. A [layer-wise study](https://arxiv.org/abs/2502.03559) of Wav2Vec 2.0, WavLM, and HuBERT showed that early layers carry the deepfake signal, which makes inference about three times faster. [BiCrossMamba-ST](https://www.isca-archive.org/interspeech_2025/elkheir25_interspeech.html) then applied a Mamba model to the same problem, with 28% fewer parameters than a Transformer baseline. The DFKI-SLT system built on it placed [1st of 97 teams](https://sites.google.com/view/esdd-challenge) on Track 2 of the ESDD 2026 challenge at ICASSP, and 2nd on Track 1 ([results](https://arxiv.org/abs/2603.04865)).
 
-/* Publications inline */
-.pub-list { padding-left: 0; list-style: none; }
-.pub-list li {
-  padding: 0.55em 0;
-  border-bottom: 1px dashed #e5e7eb;
-  font-size: 0.94em;
-  line-height: 1.5;
-}
-.pub-list li:last-child { border-bottom: none; }
-.pub-title { font-weight: 600; color: #0f172a; }
-.pub-venue {
-  display: inline-block;
-  font-size: 0.74em;
-  font-weight: 700;
-  padding: 1px 7px;
-  margin-right: 6px;
-  background: #e0f2fe;
-  color: #075985;
-  border-radius: 4px;
-  letter-spacing: 0.03em;
-}
-.pub-authors { font-size: 0.88em; color: #475569; }
-.pub-authors .me { font-weight: 700; color: #0f172a; }
+The next step is a model that can explain the decision. From December 2025 to April 2026 I visited [NII](https://www.nii.ac.jp/en/) in Tokyo, working with Xin Wang and Junichi Yamagishi on speech LLMs that ground a detection in text. The paper is [Textual Acoustic Grounding](https://arxiv.org/abs/2608.30622), under review at IEEE SLT 2026. Models from that work are on [Hugging Face](https://huggingface.co/01Yassine/AudioLLM-Deepfake-Detection).
 
-/* Talks list */
-.talk-list { padding-left: 0; list-style: none; }
-.talk-list li {
-  padding: 0.4em 0;
-  border-bottom: 1px dashed #e5e7eb;
-  font-size: 0.93em;
-  display: flex; gap: 0.9em;
-}
-.talk-list li:last-child { border-bottom: none; }
-.talk-date {
-  flex: 0 0 95px; color: #64748b; font-size: 0.85em; font-weight: 600;
-  font-variant-numeric: tabular-nums; padding-top: 2px;
-}
-.talk-body { flex: 1; }
+The version other people can run is [DeepFense](https://deepfense.github.io/): an open, YAML-driven detection framework with 455+ pretrained models, which I presented at Interspeech 2026. The same line ships at [Gretchen AI](https://gretchen-ai.com/), whose detector ranked first on Deepfake-Eval 2024, and in production speech systems at [CAMB.AI](https://www.camb.ai/) across 150+ languages.
 
-/* Experience timeline */
-.exp-list { padding-left: 0; list-style: none; }
-.exp-list li {
-  display: flex; gap: 14px;
-  padding: 0.7em 0;
-  border-bottom: 1px dashed #e5e7eb;
-}
-.exp-list li:last-child { border-bottom: none; }
-.exp-logo {
-  flex: 0 0 56px; width: 56px; height: 56px;
-  border-radius: 8px; overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #f1f5f9;
-  display: flex; align-items: center; justify-content: center;
-}
-.exp-logo img { max-width: 86%; max-height: 86%; object-fit: contain; }
-.exp-body { flex: 1; font-size: 0.93em; }
-.exp-role { font-weight: 700; color: #0f172a; }
-.exp-where { color: #475569; }
-.exp-when {
-  color: #64748b; font-size: 0.84em; font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
+I lead two projects on top of that research. **VERIDIC**, and a [Software Campus](https://www.softwarecampus.de/) project with Holtzbrinck and Springer Nature: €115k in federal funding, from July 2026, on multimodal deepfake detection and fact-checking. I run the team of students and research assistants.
 
-/* Awards */
-.award-list { padding-left: 0; list-style: none; }
-.award-list li {
-  padding: 0.35em 0;
-  font-size: 0.94em;
-}
-.award-year {
-  display: inline-block;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  color: #64748b;
-  width: 56px;
-}
-</style>
+## Recent
 
-<p class="intro-lead">
-  I'm a final-year PhD student at the
-  <a href="https://www.dfki.de/en/web">German Research Center for AI (DFKI)</a>
-  and <a href="https://www.tu.berlin/en/">TU Berlin</a>, advised by
-  <a href="https://scholar.google.de/citations?user=BC_qcg0AAAAJ">Prof. Sebastian Möller</a>
-  and <a href="https://scholar.google.de/citations?user=tImnUh0AAAAJ">Dr. Tim Polzehl</a>.
-  My research focuses on <b>robust audio deepfake detection</b> — from SSL backbone analysis
-  and efficient architectures to Audio LLMs — building systems that generalize across domains
-  and real-world conditions. I recently interned at
-  <a href="https://www.nii.ac.jp/en/">NII Japan</a> (Dec 2025 – Apr 2026), working with
-  <a href="https://scholar.google.co.uk/citations?user=xzFUMXkAAAAJ">Xin Wang</a> and
-  <a href="https://scholar.google.co.uk/citations?user=oGG1KuQAAAAJ">Junichi Yamagishi</a>
-  — ASVspoof co-founders — on LLM-based speech reasoning.
-  I also lead R&amp;D (part-time) at <a href="https://gretchen-ai.com/">Gretchen AI</a>
-  and consult on production speech AI systems.
-  Before Berlin, I was a Research Associate at
-  <a href="https://www.hbku.edu.qa/en/qcri">QCRI</a>, building Arabic speech systems
-  (ASR, TTS, pronunciation) and contributing to
-  <a href="https://arxiv.org/pdf/2501.13944">Fanar</a> (Qatar's Arabic-centric LLM).
-  <br><br>
-  <span class="thread">
-    <b>Detection</b> is the core — and understanding how speech is <b>synthesized</b>
-    from the inside makes that detection work stronger.
-  </span>
-</p>
+- **October 2026.** Invited talk at the [GrokBot Casablanca Meetup](https://luma.com/spacexai-slxi): *MoulSot, the first Darija ASR model*, with Abdeljalil El Majjodi. [MoulSot](https://huggingface.co/blog/abdeljalilELmajjodi/moulsot).
+- **September 2026.** [Interspeech 2026](https://www.isca-archive.org/interspeech_2026), Sydney. I presented [DeepFense](https://arxiv.org/abs/2604.08450) and the [IQRA 2026](https://arxiv.org/abs/2603.29087) challenge, and co-authored [Evidence Subspace Projection](https://arxiv.org/abs/2607.11538) with the University of Stuttgart.
+- **July 2026.** Co-organized [ArA-DF 2026](https://huggingface.co/spaces/ArabicSpeech/ara-df-2026), the Arabic speech deepfake detection shared task at ArabicNLP, co-located with EMNLP 2026. Sixteen teams, two tracks.
+- **July 2026.** I lead a [Software Campus](https://www.softwarecampus.de/) project with Holtzbrinck and Springer Nature (€115k, federal funding) on multimodal deepfake detection and fact-checking, and I lead **VERIDIC**.
+- **May 2026.** Speech ML mentor and PhD panelist at [HackAI Morocco](https://hackai.ma).
+- **April 2026.** Finished the visiting stay at NII Tokyo. [Paper](https://arxiv.org/abs/2608.30622).
 
-<div class="hiring-banner">
-<span class="pill">OPEN</span>
-<b>Looking for a research position starting January 2027.</b> Speech / audio ML, foundation models, audio LLMs, multilingual speech, or trust &amp; safety in audio. Industry or academia, Europe / Middle East / remote. <a href="mailto:yassine.el_kheir@dfki.de">Get in touch.</a>
-</div>
+## Talks
 
-<div class="section-title">🔬 Research Interests</div>
+GrokBot and Interspeech 2026 are in the list above. Slides, video, and the earlier talks are on the [talks page]({{ '/talks/' | relative_url }}).
 
-<!-- Interested in the science of robust speech intelligence, how foundation models represent, reason about, and are fooled by audio, and how to make them work across the world's linguistic diversity -->
+- **Alexandria University**, December 2025. Speech AI and Arabic pronunciation. [Video](https://www.youtube.com/watch?v=82v05REnNvo).
+- **Reality Defender**, October 2025. Generalizable audio deepfake detection. [Slides](https://docs.google.com/presentation/d/1jH2z-_WUoXEDicsIszbYa81h1nIOMqZwfndiom6lnOo/edit).
+- **WASPAA 2025**, Tahoe City. [Two Views, One Truth](https://arxiv.org/abs/2507.20417). [Code](https://github.com/Yaselley/TwoViews_OneTruth).
+- **Interspeech 2025**, Rotterdam. [BiCrossMamba-ST](https://www.isca-archive.org/interspeech_2025/elkheir25_interspeech.html), and the [ArabicSpeech meetup](https://www.linkedin.com/posts/yassine-el-kheir-169b97191_interspeech2025-interspeech-arabicspeech-activity-7364633218228142083-IBv-).
 
-- **Robust and trustworthy audio AI**: deepfake detection, anti-spoofing, generalization across unseen domains
-- **Speech and audio foundation models**: SSL representations, interpretability, efficient architectures
-- **Audio LLMs for speech reasoning**: LLM-based deepfake detection, speech authentication, multimodal reasoning
-- **Multilingual and low-resource speech**: ASR, TTS, pronunciation assessment, dialectal modeling
-- **Tokenization for multilingual LLMs**: morphology-aware methods (MorphBPE used in Fanar)
+## Selected work
 
-<div class="section-title">🚀 Flagship Projects</div>
+- **[DeepFense](https://deepfense.github.io/).** Open framework for audio deepfake detection. [Paper](https://arxiv.org/abs/2604.08450), [code](https://github.com/Yaselley/deepfense-framework), [models](https://huggingface.co/DeepFense).
+- **Detectors.** [BiCrossMamba-ST](https://arxiv.org/abs/2505.13930), [layer-wise SSL analysis](https://arxiv.org/abs/2502.03559), [spectral and SSL fusion](https://arxiv.org/abs/2507.20417), [multi-scale adapter](https://arxiv.org/abs/2510.24852). ESDD 2026: [1st and 2nd](https://arxiv.org/abs/2603.04865).
+- **Speech LLMs.** [Textual Acoustic Grounding](https://arxiv.org/abs/2608.30622), with Xin Wang and Junichi Yamagishi at NII. [Models](https://huggingface.co/01Yassine/AudioLLM-Deepfake-Detection).
+- **Production.** [Gretchen AI](https://gretchen-ai.com/) (first on Deepfake-Eval 2024) and [CAMB.AI](https://www.camb.ai/) (ASR, TTS, and dubbing in 150+ languages).
+- **Language.** [MoulSot](https://huggingface.co/blog/abdeljalilELmajjodi/moulsot) with [AtlasIA](https://atlasia.ma/), the [Iqra'Eval](https://huggingface.co/IqraEval) / [IQRA 2026](https://arxiv.org/abs/2603.29087) pronunciation challenge, and [Fanar](https://arxiv.org/abs/2501.13944) / [MorphBPE](https://arxiv.org/abs/2502.00894).
+- **Leading.** [Software Campus](https://www.softwarecampus.de/) with Holtzbrinck and Springer Nature, and VERIDIC.
 
-<p style="font-size:0.93em; color:#475569; margin-top:-0.2em;">
-Listed roughly newest-first. See the <a href="{{ '/projects/' | relative_url }}">Projects</a> page for the full picture.
-</p>
+The [projects page]({{ '/projects/' | relative_url }}) has the longer notes.
 
-<div class="proj-grid">
+## Selected papers
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/dfki.png' | relative_url }}" alt="DFKI"></div>
-    <div class="proj-body">
-      <div class="proj-title">Robust Deepfake Detection Research</div>
-      <div class="proj-meta">DFKI &middot; ICASSP 2026 &middot; Interspeech 2025 &middot; WASPAA 2025 &middot; NAACL Findings 2025</div>
-      <p class="proj-desc">Core PhD research line: <b>BiCrossMamba-ST</b> (one of the first Mamba-based anti-spoofing models, 28% fewer params, Interspeech 2025), layer-wise SSL interpretability showing lower layers suffice for detection (~3× faster), spectral + SSL fusion (WASPAA 2025), and a parameter-efficient multi-scale adapter (ICASSP 2026).</p>
-      <div class="proj-links">
-        <a href="https://arxiv.org/pdf/2505.13930">BiCrossMamba</a>
-        <a href="https://arxiv.org/pdf/2502.03559">Layer-wise</a>
-        <a href="https://arxiv.org/pdf/2507.20417">Two Views</a>
-        <a href="https://arxiv.org/abs/2510.24852">MultiConvAdapter</a>
-      </div>
-    </div>
-  </div>
+Full list on the [publications page]({{ '/publications/' | relative_url }}) and on [Google Scholar](https://scholar.google.com/citations?user=KATQHwgAAAAJ).
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/deepfense.png' | relative_url }}" alt="DeepFense"></div>
-    <div class="proj-body">
-      <div class="proj-title">DeepFense Framework</div>
-      <div class="proj-meta">DFKI &middot; open-source &middot; Interspeech 2026 Long Track</div>
-      <p class="proj-desc">Open-source, configuration-driven framework for deepfake audio detection. Mix SSL frontends, backends, losses and augmentations via YAML. Ships with <b>455+ pretrained models</b> across 12 benchmarks on HuggingFace.</p>
-      <div class="proj-links">
-        <a href="https://deepfense.github.io/">website</a>
-        <a href="https://huggingface.co/DeepFense">🤗 models</a>
-        <a href="https://github.com/Yaselley/deepfense-framework">code</a>
-        <a href="https://arxiv.org/abs/2604.08450">paper</a>
-      </div>
-    </div>
-  </div>
+- Y. El Kheir et al. [DeepFense: A Unified, Modular Framework for Robust Deepfake Audio Detection](https://arxiv.org/abs/2604.08450). Interspeech 2026.
+- Y. El Kheir et al. [IQRA 2026: Interspeech Challenge on Automatic Pronunciation Assessment for MSA](https://arxiv.org/abs/2603.29087). Interspeech 2026.
+- Y. Xiao, Y. El Kheir, et al. [Evidence Subspace Projection](https://arxiv.org/abs/2607.11538). Interspeech 2026.
+- Y. El Kheir et al. [Textual Acoustic Grounding for Generalizable LLM-Based Deepfake Voice Detection](https://arxiv.org/abs/2608.30622). IEEE SLT 2026, under review.
+- Y. El Kheir et al. [A Parameter-Efficient Multi-Scale Adapter for Synthetic Speech Detection](https://arxiv.org/abs/2510.24852). ICASSP 2026.
+- Y. El Kheir et al. DFKI-SLT for ESDD 2026: BiCrossMamba-ST with Attentive SSL Fusion. ICASSP 2026. [Results](https://arxiv.org/abs/2603.04865).
+- Y. El Kheir, T. Polzehl, S. Möller. [BiCrossMamba-ST](https://www.isca-archive.org/interspeech_2025/elkheir25_interspeech.html). Interspeech 2025.
+- Y. El Kheir et al. [Layer-wise Analysis of SSL Models for Audio Deepfake Detection](https://arxiv.org/abs/2502.03559). Findings of NAACL 2025.
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/nii.png' | relative_url }}" alt="NII Japan"></div>
-    <div class="proj-body">
-      <div class="proj-title">Audio LLMs &amp; Speech Reasoning</div>
-      <div class="proj-meta">NII Japan &middot; Dec 2025 – Apr 2026 &middot; SLT 2026 (under review)</div>
-      <p class="proj-desc">Visiting researcher at NII Japan with Xin Wang and Junichi Yamagishi (ASVspoof co-founders), extending deepfake detection toward LLM-based speech reasoning. Work led to <i>Bridging the Modality Gap</i>, using explicit textual grounding to teach LLMs to reason about speech authenticity — moving beyond classifiers.</p>
-    </div>
-  </div>
+## Positions
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/gretchen.svg' | relative_url }}" alt="Gretchen AI"></div>
-    <div class="proj-body">
-      <div class="proj-title">Gretchen AI</div>
-      <div class="proj-meta">Research &amp; Engineering Lead (part-time) &middot; 2025 to present</div>
-      <p class="proj-desc">Co-leading R&amp;D for generative-media detection. Built an image deepfake detector ranked <b>#1 on Deepfake-Eval 2024</b> (~83% accuracy), and designed the production inference pipeline. Direct deployment of PhD research.</p>
-      <div class="proj-links">
-        <a href="https://gretchen-ai.com/">website</a>
-      </div>
-    </div>
-  </div>
+- **PhD researcher**, DFKI and TU Berlin, 2024 to present. I lead [Fake-O-Meter](https://fake-o-meter.github.io/), the DFKI-coordinated BMBF project on public deepfake-detection tools.
+- **Project lead, Software Campus**, July 2026 to present. I lead a €115k federally funded project with [Holtzbrinck and Springer Nature](https://www.softwarecampus.de/) on multimodal deepfake detection and fact-checking, with a team of students and research assistants.
+- **Project lead, VERIDIC.**
+- **Visiting researcher**, NII, Tokyo, December 2025 to April 2026. Xin Wang and Junichi Yamagishi.
+- **Founding research scientist** (part-time), [Gretchen AI](https://gretchen-ai.com/), Berlin, January 2025 to present.
+- **Research consultant**, [CAMB.AI](https://www.camb.ai/), April 2025 to present. Multilingual ASR, TTS, and dubbing.
+- **Research associate**, [QCRI](https://www.hbku.edu.qa/en/qcri), Doha, 2022 to 2024. Fanar and QVoice.
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/atlasia.png' | relative_url }}" alt="AtlasIA"></div>
-    <div class="proj-body">
-      <div class="proj-title">AtlasIA, Open-Source AI for Morocco</div>
-      <div class="proj-meta">Speech Team Lead &middot; 2025 to present</div>
-      <p class="proj-desc">Leading ASR and TTS development for Moroccan Darija. Built <b><a href="https://huggingface.co/blog/abdeljalilELmajjodi/moulsot">MoulSot</a></b>: 80 hours of curated speech distilled from 1,500 hours via a 9-stage pipeline, with fine-tuned Qwen3-ASR. Also building the first natural TTS system for Darija.</p>
-      <div class="proj-links">
-        <a href="https://atlasia.ma/">website</a>
-        <a href="https://huggingface.co/atlasia">🤗 HuggingFace</a>
-      </div>
-    </div>
-  </div>
+**Education.** PhD, Computer Science, TU Berlin / DFKI, 2024 to 2027, defense expected April 2027. MSc, Machine Learning, KTH Royal Institute of Technology, 2022. Diplôme d'Ingénieur, Télécom Paris, 2022, top 5%.
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/iqraeval.png' | relative_url }}" alt="Iqra'Eval"></div>
-    <div class="proj-body">
-      <div class="proj-title">Iqra'Eval, Quranic Pronunciation</div>
-      <div class="proj-meta">Founder &amp; Lead Organizer &middot; ArabicNLP 2025 &middot; Interspeech 2026 Challenge</div>
-      <p class="proj-desc">Founded the first shared task for Quranic pronunciation assessment (ArabicNLP 2025). Follow-up accepted as an <b>Interspeech 2026 Challenge</b> — establishing a lasting community benchmark for Arabic pronunciation.</p>
-      <div class="proj-links">
-        <a href="https://huggingface.co/IqraEval">🤗 dataset</a>
-        <a href="https://arxiv.org/abs/2603.29087">IQRA 2026</a>
-      </div>
-    </div>
-  </div>
+## Collaboration
 
-  <div class="proj-card">
-    <div class="proj-logo"><img src="{{ '/images/projects/fanar.svg' | relative_url }}" alt="Fanar"></div>
-    <div class="proj-body">
-      <div class="proj-title">Fanar and MorphBPE</div>
-      <div class="proj-meta">QCRI &middot; 2022 to 2024</div>
-      <p class="proj-desc">Contributed to <b>Fanar</b>, Qatar's Arabic-centric multimodal LLM. Designed <b>MorphBPE</b>, a morphology-aware tokenizer that improves fertility and generation quality for morphologically rich languages.</p>
-      <div class="proj-links">
-        <a href="https://arxiv.org/pdf/2501.13944">Fanar paper</a>
-        <a href="https://arxiv.org/pdf/2502.00894">MorphBPE</a>
-      </div>
-    </div>
-  </div>
+I work with students and researchers anywhere. Master's theses, research visits, and joint papers are all welcome: speech foundation models, audio deepfake detection, speech LLMs, ASR and TTS, pronunciation, and low-resource speech, including Arabic and Darija.
 
-</div>
+Current students and how to write are on the [talks and collaboration page]({{ '/talks/#collaboration' | relative_url }}).
 
-<div class="section-title">📰 News</div>
+## Contact
 
-<ul class="news-list">
-  <li>
-    <span class="news-date">2026-06</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><b>3 papers accepted at Interspeech 2026:</b> <a href="https://arxiv.org/abs/2604.08450">DeepFense</a> (Long Track, first author), <a href="https://arxiv.org/abs/2603.29087">IQRA 2026</a> Challenge paper (first author), and a collaboration with <b>University of Stuttgart</b>.</span>
-  </li>
-  <li>
-    <span class="news-date">2026-06</span>
-    <span class="news-body"><span class="news-tag tag-grant">award</span>DFKI-SLT system ranked <b><a href="https://sites.google.com/view/esdd-challenge">1st in Track 2</a></b> and <b>2nd in Track 1</b> at the <b>ESDD 2026 Grand Challenge</b> (ICASSP 2026) — 97 registered teams. <a href="https://arxiv.org/abs/2603.04865">Results paper.</a></span>
-  </li>
-  <li>
-    <span class="news-date">2026-05</span>
-    <span class="news-body"><span class="news-tag tag-talk">talk</span>Returning as <b>Speech ML mentor</b> and <b>PhD Students panelist</b> at <a href="https://hackai.ma">HackAI Morocco 2026</a>.</span>
-  </li>
-  <li>
-    <span class="news-date">2026-05</span>
-    <span class="news-body"><span class="news-tag tag-code">release</span>Released <b><a href="https://huggingface.co/blog/abdeljalilELmajjodi/moulsot">MoulSot</a></b>: 80 hours of curated Moroccan Darija ASR data distilled from 1,500h of YouTube, plus a fine-tuned Qwen3-ASR model (<a href="https://huggingface.co/atlasia/moulsot.v0.3">atlasia/moulsot.v0.3</a>).</span>
-  </li>
-  <li>
-    <span class="news-date">2026-04</span>
-    <span class="news-body"><span class="news-tag tag-visit">visit</span>Completed a 5-month visiting research stay at <b><a href="https://www.nii.ac.jp/en/">NII Japan</a></b> (Tokyo), working with Xin Wang and Junichi Yamagishi on Audio LLMs for speech reasoning and deepfake detection.</span>
-  </li>
-  <li>
-    <span class="news-date">2026-03</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><b><a href="https://arxiv.org/abs/2604.08450">DeepFense</a></b> framework paper is out: a unified, modular, extensible toolkit for robust deepfake audio detection.</span>
-  </li>
-  <li>
-    <span class="news-date">2026-02</span>
-    <span class="news-body"><span class="news-tag tag-org">organize</span><b><a href="https://arxiv.org/abs/2603.29087">IQRA 2026</a></b>, the second Iqra'Eval, accepted as an <b>Interspeech 2026 Challenge</b> on MSA pronunciation assessment.</span>
-  </li>
-  <li>
-    <span class="news-date">2026-01</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><b>Two ICASSP 2026 papers</b> accepted: <a href="https://arxiv.org/abs/2510.24852">a parameter-efficient multi-scale adapter for synthetic-speech detection</a>, and the DFKI-SLT system for the ESDD 2026 challenge.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-12</span>
-    <span class="news-body"><span class="news-tag tag-visit">visit</span>Started a visiting research internship at <b><a href="https://www.nii.ac.jp/en/">NII Japan</a></b> (National Institute of Informatics, Tokyo), working with Xin Wang and Junichi Yamagishi on Audio LLMs for speech understanding.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-12</span>
-    <span class="news-body"><span class="news-tag tag-talk">talk</span>Invited talk at <b>Alexandria University</b> on Speech AI and Arabic pronunciation. <a href="https://www.youtube.com/watch?v=82v05REnNvo">Video on YouTube</a>.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-10-25</span>
-    <span class="news-body"><span class="news-tag tag-code">code</span>Released code for <a href="https://github.com/Yaselley/TwoViews_OneTruth"><b>Two Views, One Truth</b></a>.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-10-22</span>
-    <span class="news-body"><span class="news-tag tag-talk">talk</span>Invited talk at <a href="https://www.realitydefender.com/">Reality Defender</a> on <a href="https://docs.google.com/presentation/d/1jH2z-_WUoXEDicsIszbYa81h1nIOMqZwfndiom6lnOo/edit">Generalizable Audio Deepfake Detection</a>.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-10-15</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span>Presented <a href="https://arxiv.org/pdf/2507.20417"><b>Two Views, One Truth</b></a> at WASPAA 2025 (Tahoe City, USA).</span>
-  </li>
-  <li>
-    <span class="news-date">2025-09</span>
-    <span class="news-body"><span class="news-tag tag-grant">grant</span>WASPAA 2025 Travel Grant ($1,000).</span>
-  </li>
-  <li>
-    <span class="news-date">2025-08</span>
-    <span class="news-body"><span class="news-tag tag-org">organize</span>Co-organized the <a href="https://www.linkedin.com/feed/update/urn:li:activity:7364633218228142083/">ArabicSpeech Meetup</a> at Interspeech 2025.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-06</span>
-    <span class="news-body"><span class="news-tag tag-org">organize</span>Founded and led the <a href="https://huggingface.co/IqraEval"><b>Iqra'Eval Shared Task</b></a> at ArabicNLP 2025.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-05</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><a href="https://arxiv.org/pdf/2505.13930"><b>BiCrossMamba-ST</b></a>, among the first successful applications of Mamba state-space models to speech anti-spoofing.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-03</span>
-    <span class="news-body"><span class="news-tag tag-visit">role</span>Joined <b><a href="https://gretchen-ai.com/">Gretchen AI</a></b> as Research &amp; Engineering Lead (part-time), co-leading R&amp;D for generative-media detection.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-02</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><a href="https://arxiv.org/pdf/2502.00894"><b>MorphBPE</b></a>, the morpho-aware tokenizer used in <a href="https://arxiv.org/pdf/2501.13944">Fanar</a>, is out.</span>
-  </li>
-  <li>
-    <span class="news-date">2025-01</span>
-    <span class="news-body"><span class="news-tag tag-paper">paper</span><b>Layer-wise Analysis of SSL Models for Audio Deepfake Detection</b> accepted at Findings of NAACL 2025.</span>
-  </li>
-  <li>
-    <span class="news-date">2024-12</span>
-    <span class="news-body"><span class="news-tag tag-visit">visit</span>Invited researcher at the <a href="https://sdaia-event.webflow.io/">SDAIA Winter School</a>, leading a team of 15 researchers to build <b>QuranMB</b>, the first expert-annotated dataset for Quranic mispronunciation.</span>
-  </li>
-</ul>
-
-<div class="section-title">📜 Selected Publications</div>
-
-<p style="font-size:0.9em; color:#64748b; margin-top:-0.2em;">
-Full list: <a href="{{ '/publications/' | relative_url }}">publications page</a> and <a href="https://scholar.google.com/citations?user=KATQHwgAAAAJ">Google Scholar</a>
-</p>
-
-<ul class="pub-list">
-  <li>
-    <span class="pub-venue">Interspeech 2026</span>
-    <span class="pub-title"><a href="https://arxiv.org/abs/2604.08450">DeepFense: A Unified, Modular, and Extensible Framework for Robust Deepfake Audio Detection</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, A. Das, Y. Xiao, X. Wang, F. Kallel, E. E. Erdogan, N. T. Vu, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">Interspeech 2026</span>
-    <span class="pub-title"><a href="https://arxiv.org/abs/2603.29087">IQRA 2026: Interspeech Challenge on Automatic Pronunciation Assessment for MSA</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, A. Meghanani, M. Shahin, O. Ibrahim, S. A. Chowdhury, et al.</span>
-  </li>
-  <li>
-    <span class="pub-venue">ICASSP 2026</span>
-    <span class="pub-title"><a href="https://arxiv.org/abs/2510.24852">A Parameter-Efficient Multi-Scale Convolutional Adapter for Synthetic Speech Detection</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, F. Ritter-Gutiérrez, A. Das, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">ICASSP 2026</span>
-    <span class="pub-title">The DFKI-SLT System for ESDD 2026: BiCrossMamba-ST with Attentive SSL Fusion</span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, A. Das, E. E. Erdogan, F. Kallel, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">WASPAA 2025</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2507.20417">Two Views, One Truth: Spectral and Self-Supervised Features Fusion for Robust Speech Deepfake Detection</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, A. Das, E. E. Erdogan, F. Ritter-Gutiérrez, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">Interspeech 2025</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2505.13930">BiCrossMamba-ST: Speech Deepfake Detection with Bidirectional Mamba Spectro-Temporal Cross-Attention</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">NAACL Findings 2025</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2502.03559">Comprehensive Layer-wise Analysis of SSL Models for Audio Deepfake Detection</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, Y. Samih, S. Maharjan, T. Polzehl, S. Möller</span>
-  </li>
-  <li>
-    <span class="pub-venue">arXiv 2025</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2501.13944">Fanar: An Arabic-Centric Multimodal Generative AI Platform</a></span><br>
-    <span class="pub-authors">Fanar Team (incl. <span class="me">Y. El Kheir</span>)</span>
-  </li>
-  <li>
-    <span class="pub-venue">arXiv 2025</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2502.00894">MorphBPE: A Morpho-Aware Tokenizer Bridging Linguistic Complexity for Efficient LLM Training Across Morphologies</a></span><br>
-    <span class="pub-authors">E. Asgari, <span class="me">Y. El Kheir</span>, M. A. S. Javaheri</span>
-  </li>
-  <li>
-    <span class="pub-venue">ACL 2024</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2408.02430">Beyond Orthography: Automatic Recovery of Short Vowels and Dialectal Sounds in Arabic</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, H. Mubarak, A. Ali, S. A. Chowdhury</span>
-  </li>
-  <li>
-    <span class="pub-venue">ICASSP 2024</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2309.07719">L1-aware Multilingual Mispronunciation Detection Framework</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, S. A. Chowdhury, A. Ali</span>
-  </li>
-  <li>
-    <span class="pub-venue">Interspeech 2023</span>
-    <span class="pub-title"><a href="https://arxiv.org/pdf/2305.07445">QVoice: Arabic Speech Pronunciation Learning Application</a></span><br>
-    <span class="pub-authors"><span class="me">Y. El Kheir</span>, F. Khnaisser, S. A. Chowdhury, H. Mubarak, S. Afzal, A. Ali</span>
-  </li>
-</ul>
-
-<div class="section-title">🎤 Invited Talks &amp; Selected Visits</div>
-
-<ul class="talk-list">
-  <li>
-    <span class="talk-date">2026-05</span>
-    <span class="talk-body"><b><a href="https://hackai.ma">HackAI Morocco 2026</a></b>, Speech ML Mentor (2nd year) and panelist on the PhD Students Panel.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-12</span>
-    <span class="talk-body"><b><a href="https://www.nii.ac.jp/en/">NII Japan</a></b>, Tokyo, visiting researcher (Dec 2025 – Apr 2026) with Xin Wang and Junichi Yamagishi on Audio LLMs and speech deepfake detection.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-12</span>
-    <span class="talk-body"><b>Alexandria University</b>, invited talk on Speech AI and Arabic pronunciation. <a href="https://www.youtube.com/watch?v=82v05REnNvo">Video on YouTube</a>.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-10</span>
-    <span class="talk-body"><b><a href="https://www.realitydefender.com/">Reality Defender</a></b>, invited talk on <a href="https://docs.google.com/presentation/d/1jH2z-_WUoXEDicsIszbYa81h1nIOMqZwfndiom6lnOo/edit">Generalizable Audio Deepfake Detection</a>.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-10</span>
-    <span class="talk-body"><b>WASPAA 2025</b>, Tahoe City, paper presentation on Two Views, One Truth.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-08</span>
-    <span class="talk-body"><b>Interspeech 2025</b>, Rotterdam, co-organized the ArabicSpeech Meetup.</span>
-  </li>
-  <li>
-    <span class="talk-date">2025-05</span>
-    <span class="talk-body"><b><a href="https://hackai.ma">HackAI Morocco 2025</a></b>, Speech ML Mentor on ASR and forced alignment for low-resource dialects.</span>
-  </li>
-  <li>
-    <span class="talk-date">2024-12</span>
-    <span class="talk-body"><b><a href="https://sdaia-event.webflow.io/">SDAIA Winter School</a></b>, Riyadh, invited researcher, led the QuranMB project team.</span>
-  </li>
-  <li>
-    <span class="talk-date">2024</span>
-    <span class="talk-body"><b>SDAIA Summer School</b>, invited researcher in the speech and language program.</span>
-  </li>
-</ul>
-
-<div class="section-title">💼 Experience</div>
-
-<ul class="exp-list">
-  <li>
-    <div class="exp-logo"><img src="{{ '/images/projects/dfki.png' | relative_url }}" alt="DFKI"></div>
-    <div class="exp-body">
-      <span class="exp-role">PhD Researcher</span>, <span class="exp-where">DFKI &amp; TU Berlin</span><br>
-      <span class="exp-when">2024 to present</span><br>
-      <small>Speech foundation models, SSL interpretability, Mamba for audio, multimodal robustness. DeepFense framework, News-Polygraph contributor.</small>
-    </div>
-  </li>
-  <li>
-    <div class="exp-logo"><img src="{{ '/images/projects/nii.png' | relative_url }}" alt="NII Japan"></div>
-    <div class="exp-body">
-      <span class="exp-role">Visiting Researcher</span>, <span class="exp-where">National Institute of Informatics (NII), Tokyo, Japan</span><br>
-      <span class="exp-when">Dec 2025 – Apr 2026</span><br>
-      <small>Worked with Xin Wang and Junichi Yamagishi — co-founders of the ASVspoof challenge — on Audio LLMs for speech reasoning and deepfake detection. Explored textual grounding and LLM-based speech authenticity assessment.</small>
-    </div>
-  </li>
-  <li>
-    <div class="exp-logo"><img src="{{ '/images/projects/gretchen.svg' | relative_url }}" alt="Gretchen AI"></div>
-    <div class="exp-body">
-      <span class="exp-role">Research &amp; Engineering Lead (part-time)</span>, <span class="exp-where">Gretchen AI, Berlin</span><br>
-      <span class="exp-when">Mar 2025 to present</span><br>
-      <small>Co-leading R&amp;D for generative-media detection. #1 on Deepfake-Eval 2024 benchmark for image deepfake detection.</small>
-    </div>
-  </li>
-  <li>
-    <div class="exp-logo"><img src="{{ '/images/projects/qcri.svg' | relative_url }}" alt="QCRI"></div>
-    <div class="exp-body">
-      <span class="exp-role">Research Associate</span>, <span class="exp-where">Qatar Computing Research Institute (QCRI)</span><br>
-      <span class="exp-when">2022 to 2024</span><br>
-      <small>Fanar LLM (MorphBPE tokenizer, large-scale training pipelines) and QVoice (Arabic pronunciation learning). 6+ papers in 2 years.</small>
-    </div>
-  </li>
-</ul>
-
-<p style="font-size:0.9em; color:#475569;">
-<b>Education:</b> PhD, TU Berlin / DFKI (2024, exp. 2027). MSc Machine Learning, KTH Royal Institute of Technology (2021, 2022). MSc Data Science, EURECOM &amp; Télécom Paris (2020, 2021). Diplôme d'Ingénieur, Télécom Paris (2019, 2022, top 5%).
-</p>
-
-<div class="section-title">🏅 Awards &amp; Grants</div>
-
-<ul class="award-list">
-  <li><span class="award-year">2026</span> <b>1st place, Track 2</b> &amp; <b>2nd place, Track 1</b>, <a href="https://sites.google.com/view/esdd-challenge">ESDD 2026 Grand Challenge</a> at ICASSP 2026 (97 registered teams) — <a href="https://arxiv.org/abs/2603.04865">results paper</a></li>
-  <li><span class="award-year">2024</span> <b>1st place</b>, Deepfake-Eval 2024 benchmark (~83% accuracy, image deepfake detection)</li>
-  <li><span class="award-year">2025</span> WASPAA 2025 Travel Grant ($1,000)</li>
-  <li><span class="award-year">2025</span> ArabicNLP 2025 Grant ($500), for leadership of the Iqra'Eval Shared Task</li>
-  <li><span class="award-year">2022</span> Télécom Paris Scholarship, tuition waiver plus stipend for KTH Sweden</li>
-  <li><span class="award-year">2019</span> FIRSI Excellence Scholarship (€9,000/year)</li>
-  <li><span class="award-year">2018</span> Prépa FIRSI Scholarship</li>
-</ul>
-
-<div class="section-title">🤝 Mentorship &amp; Service</div>
-
-I'm currently supervising <b>Enes Erdogan</b> and <b>Feidi Kallel</b> (MSc students at TU Berlin), and have mentored teams at the <b>SDAIA Winter School</b>, <b>SDAIA Summer School</b>, <b>HackAI Morocco</b> (2025 and 2026), and through the <b>Iqra'Eval</b> initiative.
-
-If you're a Master's student in Germany or the EU interested in speech and audio ML, foundation models, ASR/TTS, audio LLMs, deepfake detection, or Arabic / low-resource speech, feel free to reach out. See the <a href="{{ '/talks/' | relative_url }}">Supervision</a> page for details.
-
-**Program Committee & Reviewing:** ACL 2024, ACL 2025, EMNLP 2024, Interspeech 2025, ICASSP 2025, EACL 2025, COLING 2024/25, ArabicNLP 2025, SLaTE 2025. Full list on the <a href="{{ '/teaching/' | relative_url }}">Services</a> page.
-
-<div class="section-title">📬 Contact</div>
-
-<p style="font-size:0.95em;">
-📧 <a href="mailto:yassine.el_kheir@dfki.de">yassine.el_kheir@dfki.de</a> &nbsp;&middot;&nbsp;
-📧 <a href="mailto:elkheiryassine0@gmail.com">elkheiryassine0@gmail.com</a><br>
-🎓 <a href="https://scholar.google.com/citations?user=KATQHwgAAAAJ">Google Scholar</a> &nbsp;&middot;&nbsp;
-💻 <a href="https://github.com/Yaselley">GitHub</a> &nbsp;&middot;&nbsp;
-🔗 <a href="https://www.linkedin.com/in/yassine-elkheir-169b97191/">LinkedIn</a>
-</p>
+[elkheiryassine0@gmail.com](mailto:elkheiryassine0@gmail.com) · [yassine.el_kheir@dfki.de](mailto:yassine.el_kheir@dfki.de) · [Google Scholar](https://scholar.google.com/citations?user=KATQHwgAAAAJ) · [GitHub](https://github.com/Yaselley) · [LinkedIn](https://www.linkedin.com/in/yassine-el-kheir-169b97191/) · [CV]({{ '/files/Yassine_ElKheir_CV.pdf' | relative_url }})

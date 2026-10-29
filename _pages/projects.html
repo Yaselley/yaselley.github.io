@@ -67,10 +67,10 @@ author_profile: true
 <div class="proj-page">
 
 <p class="intro">
-A selection of research and engineering projects I've led or contributed to. Detection is the spine; understanding speech generation from the inside makes that detection work stronger. Within each section, projects are listed roughly newest-first.
+Research and engineering, newest first inside each section. The thread is the same as on the <a href="{{ '/' | relative_url }}">homepage</a>: Arabic speech, then what the models encode, then detectors that explain themselves and that other people can run.
 </p>
 
-<h2>🛡️ Robust Deepfake Detection</h2>
+<h2>Robust deepfake detection</h2>
 
 <div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/dfki.png' | relative_url }}" alt="DFKI"></div>
@@ -110,7 +110,7 @@ A selection of research and engineering projects I've led or contributed to. Det
   </div>
 </div>
 
-<h2>🤖 Audio LLMs &amp; Speech Reasoning</h2>
+<h2>Audio LLMs and speech reasoning</h2>
 
 <div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/nii.png' | relative_url }}" alt="NII Japan"></div>
@@ -120,8 +120,8 @@ A selection of research and engineering projects I've led or contributed to. Det
     <div class="meta">National Institute of Informatics, Tokyo &middot; Dec 2025 – Apr 2026</div>
     <p>Visiting research stay working with <b><a href="https://scholar.google.co.uk/citations?user=xzFUMXkAAAAJ">Xin Wang</a></b> and <b><a href="https://scholar.google.co.uk/citations?user=oGG1KuQAAAAJ">Junichi Yamagishi</a></b> — co-founders of the ASVspoof challenge — on applying large language models to speech understanding and deepfake detection. Extended the detection problem beyond classifiers toward LLM-based reasoning over audio.</p>
     <ul>
-      <li>Explored explicit textual grounding for audio deepfakes: teaching LLMs to reason about speech authenticity in natural language rather than binary classifier scores.</li>
-      <li>Directly informed the design of <em>Bridging the Modality Gap</em> (see below), submitted to SLT 2026.</li>
+      <li>Worked on textual grounding, so a language model can explain whether a voice is synthetic.</li>
+      <li>Led to <a href="https://arxiv.org/abs/2608.30622">Textual Acoustic Grounding</a>, under review at IEEE SLT 2026.</li>
     </ul>
   </div>
 </div>
@@ -130,17 +130,17 @@ A selection of research and engineering projects I've led or contributed to. Det
   <div class="logo"><img src="{{ '/images/projects/dfki.png' | relative_url }}" alt="DFKI"></div>
   <div class="body">
     <span class="theme-tag theme-llm">paper · under review</span>
-    <h3>Bridging the Modality Gap · SLT 2026 (under review)</h3>
+    <h3>Textual Acoustic Grounding · SLT 2026 (under review)</h3>
     <div class="meta">DFKI / NII Japan &middot; 2026</div>
-    <p>Applies explicit textual grounding to LLM-based deepfake voice detection — moving beyond classification heads toward models that <em>reason</em> about speech authenticity in natural language. Bridges acoustic and semantic modalities by grounding audio representations in textual descriptions of synthesis artifacts.</p>
-    <ul>
-      <li>Part of a broader direction on Audio LLMs for trustworthy speech understanding.</li>
-      <li>Built on the foundation of the NII Japan residency with Xin Wang and Junichi Yamagishi.</li>
-    </ul>
+    <p>Speech LLMs that take explicit acoustic features as text, so the model can say why a voice is synthetic. A frozen language model generalizes further out of domain, and costs less to run. From the NII residency with Xin Wang and Junichi Yamagishi.</p>
+    <div class="links">
+      <a href="https://arxiv.org/abs/2608.30622">paper</a>
+      <a href="https://huggingface.co/01Yassine/AudioLLM-Deepfake-Detection">models</a>
+    </div>
   </div>
 </div>
 
-<h2>🏗️ Frameworks &amp; Production</h2>
+<h2>Frameworks and production</h2>
 
 <div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/deepfense.png' | relative_url }}" alt="DeepFense"></div>
@@ -177,11 +177,32 @@ A selection of research and engineering projects I've led or contributed to. Det
 </div>
 
 <div class="detail-card">
+  <div class="body">
+    <span class="theme-tag theme-industry">project lead · July 2026 to present</span>
+    <h3>Software Campus</h3>
+    <div class="meta">Holtzbrinck and Springer Nature &middot; €115k federal funding</div>
+    <p>I lead this project. It is a research team of students and assistants, working on multimodal deepfake detection and fact-checking with Holtzbrinck and Springer Nature, inside the Software Campus leadership program.</p>
+    <div class="links">
+      <a href="https://www.softwarecampus.de/">program</a>
+    </div>
+  </div>
+</div>
+
+<div class="detail-card">
+  <div class="body">
+    <span class="theme-tag theme-industry">project lead</span>
+    <h3>VERIDIC</h3>
+    <div class="meta">Project lead</div>
+    <p>I lead VERIDIC.</p>
+  </div>
+</div>
+
+<div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/gretchen.svg' | relative_url }}" alt="Gretchen AI"></div>
   <div class="body">
     <span class="theme-tag theme-industry">startup · part-time</span>
     <h3>Gretchen AI, Research &amp; Engineering Lead</h3>
-    <div class="meta">Berlin &middot; Mar 2025 to present &middot; part-time</div>
+    <div class="meta">Berlin &middot; January 2025 to present &middot; part-time</div>
     <p>Co-leading R&amp;D for generative-media detection at a Berlin-based AI startup. Built a proprietary image deepfake detector that ranked <b>#1 on the Deepfake-Eval 2024 benchmark</b> (~83% accuracy), and designed the production inference pipeline. Direct productionization of PhD research.</p>
     <div class="links">
       <a href="https://gretchen-ai.com/">website</a>
@@ -190,16 +211,18 @@ A selection of research and engineering projects I've led or contributed to. Det
 </div>
 
 <div class="detail-card">
-  <div class="logo" style="font-size:2em; color:#64748b;">💬</div>
   <div class="body">
     <span class="theme-tag theme-industry">consulting</span>
-    <h3>Research Consultant · Production Speech Systems</h3>
-    <div class="meta">2024 to present</div>
-    <p>Research consulting on speech AI for production-scale multilingual TTS and content localization. Work spans model robustness, speech quality assessment, and evaluation across 100+ languages in live production environments.</p>
+    <h3>CAMB.AI, production speech</h3>
+    <div class="meta">Research consultant &middot; April 2025 to present</div>
+    <p>Advice on ASR, TTS, and real-time translation for a dubbing platform in 150+ languages, including work for IMAX, Google Cloud, Comcast, and NASCAR. The job is to take a research system and make it hold up under production constraints: quality, artifacts, and robustness at scale.</p>
+    <div class="links">
+      <a href="https://www.camb.ai/">website</a>
+    </div>
   </div>
 </div>
 
-<h2>🗣️ Expressive &amp; Multilingual Speech</h2>
+<h2>Multilingual and low-resource speech</h2>
 
 <div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/atlasia.png' | relative_url }}" alt="AtlasIA"></div>
@@ -263,14 +286,14 @@ A selection of research and engineering projects I've led or contributed to. Det
   </div>
 </div>
 
-<h2>🧠 Speech &amp; Audio Foundation Models</h2>
+<h2>Speech and language models</h2>
 
 <div class="detail-card">
   <div class="logo"><img src="{{ '/images/projects/fanar.svg' | relative_url }}" alt="Fanar"></div>
   <div class="body">
     <span class="theme-tag theme-foundation">LLM &middot; tokenization</span>
     <h3>Fanar &amp; MorphBPE</h3>
-    <div class="meta">QCRI &middot; 2022 to 2024 &middot; arXiv 2025</div>
+    <div class="meta">QCRI &middot; 2022 to 2024 &middot; MorphBPE at ACL 2026</div>
     <p>Contributed to <b>Fanar</b>, Qatar's Arabic-centric multimodal LLM, and designed <b>MorphBPE</b>, a morphology-aware tokenizer that integrates linguistic structure into subword segmentation. Shows how foundation-model design choices can be tuned to morphologically rich languages without sacrificing efficiency.</p>
     <ul>
       <li><b>MorphBPE</b> improves fertility rates and downstream generation quality for morphologically rich languages, with negligible overhead vs. plain BPE.</li>

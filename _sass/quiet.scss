@@ -1,0 +1,187 @@
+/* Warm paper, ink, and a copper rule. Links stay dark; the underline carries the color. */
+
+:root {
+  --global-bg-color: #f3efe6;
+  --global-text-color: #241c16;
+  --global-text-color-light: #6d6258;
+  --global-link-color: #8f3d22;
+  --global-link-color-hover: #5c2414;
+  --global-link-color-visited: #8f3d22;
+  --global-masthead-link-color: #241c16;
+  --global-masthead-link-color-hover: #8f3d22;
+  --global-border-color: #e3d8c8;
+  --ink: #241c16;
+  --copper: #9c3b1e;
+  --paper: #f3efe6;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Literata", Georgia, serif;
+}
+
+.masthead {
+  background: var(--paper);
+  border-bottom: 2px solid var(--copper);
+  box-shadow: none;
+}
+
+.masthead__inner-wrap,
+.masthead__menu-item,
+.masthead__menu-item a,
+.greedy-nav a {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.masthead__menu-item--lg a {
+  font-weight: 640;
+  letter-spacing: -0.01em;
+}
+
+.page__content,
+.archive {
+  font-family: "Literata", Georgia, serif;
+  line-height: 1.65;
+  font-size: 1.05em;
+  color: var(--ink);
+}
+
+.page__title,
+.author__name,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.archive h1,
+.archive h2,
+.archive h3,
+.sidebar h3 {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--ink);
+  font-weight: 560;
+  letter-spacing: -0.015em;
+}
+
+.page__title {
+  margin-bottom: 0.75em;
+}
+
+.page__content h2,
+.archive h2 {
+  font-size: 1.35em;
+  margin-top: 2.1em;
+  margin-bottom: 0.55em;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.page__content h2::before,
+.archive h2::before {
+  content: "";
+  display: inline-block;
+  width: 1.15rem;
+  height: 2px;
+  margin-right: 0.55rem;
+  background: var(--copper);
+  vertical-align: middle;
+  transform: translateY(-0.2em);
+}
+
+.page__content li,
+.archive li {
+  margin-bottom: 0.45em;
+}
+
+.page__content a,
+.archive a,
+.sidebar a {
+  color: var(--ink) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  text-decoration: underline;
+  text-decoration-color: #c4622d;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.page__content a:hover,
+.archive a:hover,
+.sidebar a:hover {
+  color: var(--copper) !important;
+  text-decoration-thickness: 2px;
+}
+
+.author__urls-wrapper > button,
+.btn--inverse {
+  display: none !important;
+}
+
+.author__bio,
+.author__urls,
+.sidebar p,
+.sidebar li {
+  font-family: "Literata", Georgia, serif;
+  color: #3a312a;
+}
+
+.theme-tag,
+.news-tag,
+.pill,
+.pub-venue,
+.v,
+.v.top,
+.v.arxiv,
+.v.journal {
+  background: transparent !important;
+  color: #6d6258 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  letter-spacing: 0 !important;
+  font-weight: 650;
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.detail-card,
+.proj-card,
+.pub-entry {
+  border: 0 !important;
+  border-bottom: 1px solid #e3d8c8 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  transform: none !important;
+}
+
+.detail-card:hover,
+.proj-card:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.detail-card h3,
+.detail-card .meta,
+.pub-content .title,
+.pub-content .authors,
+.pub-content .desc {
+  color: var(--ink);
+}
+
+.detail-card .links a,
+.pub-content .links a,
+.proj-links a {
+  margin-right: 0.85em;
+}
+
+.page__footer,
+.page__footer-copyright,
+.page__footer a {
+  background: transparent;
+  color: #6d6258;
+}
+
+.page__footer {
+  border-top: 1px solid #e3d8c8;
+}
